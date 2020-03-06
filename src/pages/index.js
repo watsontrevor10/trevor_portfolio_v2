@@ -9,21 +9,28 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <ImageWrapper>
-        <MusicImage />
-        <MusicImage />
-        <MusicImage />
-        <MusicImage />
+        <StyledMusicImage />
+        <StyledMusicImage />
+        <StyledMusicImage />
+        <StyledMusicImage />
     </ImageWrapper>
   </Layout>
 )
 
 const ImageWrapper = styled.div`
   display: Flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
+  margin-top: 6em;
   .gatsby-image-wrapper {
     width: 300px;
   }
+`
+
+const StyledMusicImage = styled(MusicImage)`
+  margin: 1em;
+  padding: 2px;
+  
 `
 
 export default IndexPage
