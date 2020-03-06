@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { FaBars } from "react-icons/fa"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -9,6 +10,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
+    <FaBars style={{ color: "white", float: "left", size: "5em", margin: '2em' }} />
     <div
       style={{
         margin: `0 auto`,
@@ -16,7 +18,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0, textAlign: 'center', }}>
+      <h1 style={{ margin: 0, textAlign: "center" }}>
         <Link
           to="/"
           style={{
