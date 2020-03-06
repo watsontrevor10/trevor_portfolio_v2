@@ -5,32 +5,44 @@ import Layout from "../components/layout"
 import MusicImage from "../components/musicImage"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <ImageWrapper>
-        <StyledMusicImage />
-        <StyledMusicImage />
-        <StyledMusicImage />
-        <StyledMusicImage />
-    </ImageWrapper>
-  </Layout>
-)
+const IndexPage = () => {
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <ImageWrapper>
+        <StyledLink to='/coding'>
+          <MusicImage />
+        </StyledLink>
+        <StyledLink to='music'>
+          <MusicImage />
+        </StyledLink>
+        <StyledLink to='photography'>
+          <MusicImage />
+        </StyledLink>
+        <StyledLink to='writing'>
+          <MusicImage />
+        </StyledLink>
+      </ImageWrapper>
+    </Layout>
+  )
+}
 
 const ImageWrapper = styled.div`
   display: Flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin-top: 6em;
+  justify-content: center;
+  margin-top: 3em;
   .gatsby-image-wrapper {
-    width: 300px;
+    width: 500px;
+    height: auto;
   }
 `
 
-const StyledMusicImage = styled(MusicImage)`
+const StyledLink = styled(Link)`
   margin: 1em;
-  padding: 2px;
-  
+  padding: 1em;
+  max-width: 90%;
 `
 
 export default IndexPage
