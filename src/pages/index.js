@@ -23,9 +23,9 @@ const IndexPage = () => {
         >
           <MusicImage />
           {toggleHover ?
-            <div style={{ alignItems: 'center', position: 'absolute', top: 200, left: 0, right: 0, bottom: 0 }} >
+            <TextOverlay>
               <CodingText />
-            </div>
+            </TextOverlay>
             : ''}
         </StyledLink>
         <StyledLink to='music'>
@@ -52,6 +52,15 @@ const ImageWrapper = styled.div`
     width: 500px;
     height: auto;
   }
+`
+
+const TextOverlay = styled.div`
+  align-items: center; 
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
 `
 
 const StyledLink = styled(Link)`
