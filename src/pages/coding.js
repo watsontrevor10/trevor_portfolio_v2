@@ -55,7 +55,10 @@ const Container = styled.div`
 const StyledImage = styled.div`
     max-width: 200px;
     margin: 1em;
-    border: single;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    align-content: center;
 `
 
 export default CodingPage

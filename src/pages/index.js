@@ -65,7 +65,7 @@ const TextOverlay = styled.div`
 
 const StyledLink = styled(Link)`
   margin: 1em;
-  position: relative;s
+  position: relatives;
   max-width: 90%;
   box-shadow: 1px 5px 5px grey;
   transition: 300ms ease-in-out;
