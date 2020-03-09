@@ -5,7 +5,7 @@ const CodingText = () => {
   return (
     <div style={{ textAlign: 'center', }}>
       <h3>Coding</h3>
-      <hr/>
+      <br/>
       <p>Projects</p>
       <p>Skills</p>
     </div>

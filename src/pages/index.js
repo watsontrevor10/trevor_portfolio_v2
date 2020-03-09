@@ -17,12 +17,16 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <ImageWrapper>
-        <StyledLink to='/coding' onMouseEnter={() => setToggleHover(!toggleHover)} onMouseLeave={() => setToggleHover(!toggleHover)} >
+        <StyledLink
+          to='/coding'
+          onMouseEnter={() => hoverImage()} onMouseLeave={() => hoverImage()}
+        >
           <MusicImage />
-          <div style={{ positon: 'absolute', top: '80%', left: '20%', padding: '1em' }}>
-            <CodingText />
-          </div>
-          {toggleHover ? <CodingText style={{ positon: 'absolute; top: 80%, left: 20%,' }} /> : ''}
+          {toggleHover ?
+            <div style={{ alignItems: 'center', position: 'absolute', top: 200, left: 0, right: 0, bottom: 0 }} >
+              <CodingText />
+            </div>
+            : ''}
         </StyledLink>
         <StyledLink to='music'>
           <MusicImage />
@@ -52,11 +56,10 @@ const ImageWrapper = styled.div`
 
 const StyledLink = styled(Link)`
   margin: 1em;
+  position: relative;s
   max-width: 90%;
-  box-shadow: 1px 10px 10px grey;
+  box-shadow: 1px 5px 5px grey;
   transition: 300ms ease-in-out;
 `
-
-
 
 export default IndexPage
