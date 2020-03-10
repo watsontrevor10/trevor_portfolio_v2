@@ -1,49 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-const Instagram = () => {
-  const [photoData, setPhotoData] = useState('')
-
-  // <StaticQuery
-  //   query={graphql`
-    const query = graphql`
-    query {
+const Instagram = () => (
+  <StaticQuery
+    query={graphql`
+      query {
         allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
-    edges {
-      node {
-        id
-        caption
-        localFile {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+          edges {
+            node {
+              id
+              caption
+              localFile {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    originalImg
+                  }
+                }
+                url
+              }
             }
           }
         }
       }
-    }
-  }
-}`
-  
-
-const photos = ({ data }) => {
-  data.allInstaNode.edges.map((photo, i) => {
-    return (
-      <div key={i}>
-        <Img fluid={photo.node.fluid} />
+    `}
+    render={data => (
+      <div>
+        {data.allInstaNode.edges.map((item, i) =>
+          item.node.localFile ? (
+            <div key={i}>
+              <a
+                href={item.node.url}
+                target='_blank'
+                rel='noopener'
+                tabIndex='0'
+              >
+                <Img fluid={item.node.localFile.childImageSharp.fluid} />
+              </a>
+            </div>
+          ) : (
+            <div></div>
+          )
+        )}
       </div>
-    )
-  })
-}
-
-
-return (
-  <div>
-    {photos}
-  </div>
+    )}
+  />
 )
-}
-
 
 export default Instagram
