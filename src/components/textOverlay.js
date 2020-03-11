@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CodingText = () => {
+const TextOverlay = ({ children }) => {
 
   return (
     <div styles={{ alignItems: 'center', alignContent: 'center'}}>
-      <h3 align='center'>Coding</h3>
+      <h3 align='center'>{children}</h3>
     </div>
   )
 }
 
-export default CodingText
+export default TextOverlay
