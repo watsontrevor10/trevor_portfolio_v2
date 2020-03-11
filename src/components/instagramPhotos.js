@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Instagram = () => (
@@ -26,26 +27,41 @@ const Instagram = () => (
       }
     `}
     render={data => (
-      <div>
+      <MainContainer>
         {data.allInstaNode.edges.map((item, i) =>
           item.node.localFile ? (
-            <div key={i}>
+            <ImageContainer key={i}>
               <a
                 href={item.node.url}
-                target='_blank'
-                rel='noopener'
-                tabIndex='0'
+                target="_blank"
+                rel="noopener"
+                tabIndex="0"
               >
-                <Img fluid={item.node.localFile.childImageSharp.fluid} />
+                <Image fluid={item.node.localFile.childImageSharp.fluid} />
               </a>
-            </div>
+            </ImageContainer>
           ) : (
             <div></div>
           )
         )}
-      </div>
+      </MainContainer>
     )}
   />
 )
+
+const MainContainer = styled.div`
+  line-height: 0;
+  column-count: 3;
+  column-gap: 0px;
+`
+
+const ImageContainer = styled.div`
+  padding: 0px;
+  break-inside: avoid-column;
+`
+
+const Image = styled(Img)`
+  width: 100% !important;
+`
 
 export default Instagram
