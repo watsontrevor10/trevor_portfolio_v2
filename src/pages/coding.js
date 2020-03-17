@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 
 // Images and assets
+import htmlLogo from '../images/html-logo.png'
 import cssLogo from '../images/css3-logo.png'
 import seekr from '../images/dpl-seeker.png'
 import gatsbyIcon from '../images/gatsby-icon.png'
 import railsIcon from '../images/rails.png'
 import reactIcon from '../images/react.png'
+import postgresLogo from '../images/postgres.png'
 
 const CodingPage = () => {
 
@@ -37,7 +39,13 @@ const CodingPage = () => {
                     <img src={gatsbyIcon} />
                 </StyledImage>
                 <StyledImage>
+                    <img src={htmlLogo} />
+                </StyledImage>
+                <StyledImage>
                     <img src={cssLogo} />
+                </StyledImage>
+                <StyledImage>
+                    <img src={postgresLogo} />
                 </StyledImage>
             </Container>
         </Layout>
