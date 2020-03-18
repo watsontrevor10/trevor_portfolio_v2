@@ -10,6 +10,7 @@ import gatsbyIcon from "../images/gatsby-icon.png"
 import railsIcon from "../images/rails.png"
 import reactIcon from "../images/react.png"
 import postgresLogo from "../images/postgres.png"
+import tyqcolor from "../images/tyqcolor.png"
 
 const CodingPage = () => {
   return (
@@ -25,6 +26,14 @@ const CodingPage = () => {
             <h3>DevPoint Seekr</h3>
           </div>
           <img src={seekr} />
+        </ProjectImage>
+        <ProjectImage>
+          <div style={{ margin: "1em" }}>
+            <h3>Ty Q. Color</h3>
+          </div>
+          <a href="https://tyqcolor.com/" target="_blank">
+            <img src={tyqcolor} />
+          </a>
         </ProjectImage>
       </Container>
       <div>
@@ -64,7 +73,7 @@ const SKillsImage = styled.div`
 `
 
 const ProjectImage = styled.div`
-  max-width: 500px;
+  max-width: 400px;
   margin: 1em;
   padding: 5px;
   display: flex;
