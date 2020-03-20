@@ -31,14 +31,10 @@ const Instagram = () => (
         {data.allInstaNode.edges.map((item, i) =>
           item.node.localFile ? (
             <ImageContainer key={i}>
-              <a
-                href={item.node.url}
-                target="_blank"
-                rel="noopener"
-                tabIndex="0"
-              >
-                <Image fluid={item.node.localFile.childImageSharp.fluid} />
-              </a>
+              <Image
+                fluid={item.node.localFile.childImageSharp.fluid}
+                alt={item.node.caption}
+              />
             </ImageContainer>
           ) : (
             <div></div>
