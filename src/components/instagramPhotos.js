@@ -30,12 +30,18 @@ const Instagram = () => (
       <MainContainer>
         {data.allInstaNode.edges.map((item, i) =>
           item.node.localFile ? (
-            <ImageContainer key={i}>
-              <Image
-                fluid={item.node.localFile.childImageSharp.fluid}
-                alt={item.node.caption}
-              />
-            </ImageContainer>
+            <a
+              href="https://www.instagram.com/chivsjawnphoto/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ImageContainer key={i}>
+                <Image
+                  fluid={item.node.localFile.childImageSharp.fluid}
+                  alt={item.node.caption}
+                />
+              </ImageContainer>
+            </a>
           ) : (
             <div></div>
           )

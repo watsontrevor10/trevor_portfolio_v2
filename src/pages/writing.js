@@ -6,7 +6,13 @@ import Layout from "../components/layout"
 const Writing = ({ data }) => {
   return (
     <Layout>
-      <div style={{ textAlign: "center", marginBottom: '3em', borderBottom: '1px solid' }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginBottom: "1em",
+          borderBottom: "1px solid",
+        }}
+      >
         <h1>Blog</h1>
       </div>
 

@@ -33,7 +33,6 @@ const BlogPost = ({ data }) => (
               margin: ".3rem .5rem",
               borderRadius: ".3rem",
               fontSize: "14px",
-              // backgroundColor: "#eee",
             }}
           >
             #{cat.name}
@@ -65,17 +64,7 @@ export const query = graphql`
 `
 
 const MainContainer = styled.div`
-  /* max-width: 960px; */
   margin: 5rem;
 `
-
-// const ImageContainer = styled.div`
-//   padding: 0px;
-//   break-inside: avoid-column;
-// `
-
-// const Image = styled(Img)`
-//   width: 100% !important;
-// `
 
 export default BlogPost

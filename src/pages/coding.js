@@ -9,10 +9,8 @@ import tyqcolor from "../images/tyqcolor.png"
 const CodingPage = () => {
   return (
     <Layout>
-      <h1 align="center">Coding</h1>
-
-      <div styles={{}}>
-        <h3 align="center">Projects</h3>
+      <div style={{ marginBottom: '1em', borderBottom: '1px solid' }}>
+        <h1 align="center">Web Development</h1>
       </div>
       <Container>
         <ProjectContainer>
@@ -24,8 +22,8 @@ const CodingPage = () => {
             <p>
               A web application for keeping track of your job applications
               during the job hunt. Me and a team of 6 colleagues built this as
-              our "capstone" project while studying full-stack web development at
-              Devpoint Labs
+              our "capstone" project while studying full-stack web development
+              at Devpoint Labs
             </p>
             <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
           </TextOverlay>
@@ -60,12 +58,12 @@ const Tools = styled.span`
   margin: 0.2rem 0.3rem;
   border-radius: 0.3rem;
   font-size: 12px;
-  /* background-color: #262626; */
 `
 
 const ImageOverlay = styled.div`
   position: relative;
   transition: 0.5s;
+  opacity: .9;
 `
 
 const TextOverlay = styled.div`
@@ -76,18 +74,18 @@ const TextOverlay = styled.div`
   transition: 0.8s;
 `
 
-const SkillsContainer = styled.div`
-  max-width: 200px;
-  margin: 1em;
-  display: flex;
-  align-items: center;
-  align-content: center;
-`
+// const SkillsContainer = styled.div`
+//   max-width: 200px;
+//   margin: 1em;
+//   display: flex;
+//   align-items: center;
+//   align-content: center;
+// `
 
 const ProjectContainer = styled.div`
   max-width: 400px;
   display: flex;
-  margin: .3em;
+  margin: 0.3em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
