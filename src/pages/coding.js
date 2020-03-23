@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
@@ -9,7 +10,7 @@ import tyqcolor from "../images/tyqcolor.png"
 const CodingPage = () => {
   return (
     <Layout>
-      <div style={{ marginBottom: '1em', borderBottom: '1px solid' }}>
+      <div style={{ marginBottom: "1em", borderBottom: "1px solid" }}>
         <h1 align="center">Web Development</h1>
       </div>
       <Container>
@@ -18,14 +19,16 @@ const CodingPage = () => {
             <img src={seekr} />
           </ImageOverlay>
           <TextOverlay>
-            <h3>DevPoint Seekr</h3>
-            <p>
-              A web application for keeping track of your job applications
-              during the job hunt. Me and a team of 6 colleagues built this as
-              our "capstone" project while studying full-stack web development
-              at Devpoint Labs
-            </p>
-            <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
+            <Link to="/seekr" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <h3>DevPoint Seekr</h3>
+              <p>
+                A web application for keeping track of your job applications
+                during the job hunt. Me and a team of 6 colleagues built this as
+                our "capstone" project while studying full-stack web development
+                at Devpoint Labs
+              </p>
+              <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
+            </Link>
           </TextOverlay>
         </ProjectContainer>
         <ProjectContainer>
@@ -63,7 +66,7 @@ const Tools = styled.span`
 const ImageOverlay = styled.div`
   position: relative;
   transition: 0.5s;
-  opacity: .9;
+  opacity: 0.9;
 `
 
 const TextOverlay = styled.div`
