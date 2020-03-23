@@ -6,12 +6,12 @@ import { FaBars } from "react-icons/fa"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#3d3d3d`,
+      background: `#151616`,
       marginBottom: `1.45rem`,
     }}
   >
     <FaBars
-      style={{ color: "#f0f0f0", float: "left", size: "5em", margin: "2em" }}
+      style={{ color: "#e8e8e8", float: "left", size: "5em", margin: "2em" }}
     />
     <div
       style={{
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `#f0f0f0`,
+            color: `#e8e8e8`,
             textDecoration: `none`,
           }}
         >

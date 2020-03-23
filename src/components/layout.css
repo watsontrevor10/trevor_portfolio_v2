@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: #525252;
+  background-color: #262626;
 }
 body {
   margin: 0;
@@ -42,6 +42,7 @@ template {
 }
 a {
   background-color: transparent;
+  color: #b2cce5;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -200,7 +201,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: #f0f0f0;
+  color: #e8e8e8;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

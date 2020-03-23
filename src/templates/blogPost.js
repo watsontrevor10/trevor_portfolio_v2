@@ -33,7 +33,7 @@ const BlogPost = ({ data }) => (
               margin: ".3rem .5rem",
               borderRadius: ".3rem",
               fontSize: "14px",
-              backgroundColor: "#eee",
+              // backgroundColor: "#eee",
             }}
           >
             #{cat.name}

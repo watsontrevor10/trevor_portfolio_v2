@@ -23,7 +23,7 @@ const Writing = ({ data }) => {
           <Link
             to={"/post/" + post.node.slug}
             key={post.id}
-            style={{ textDecoration: "none", color: "black" }}
+            style={{ textDecoration: "none", color: "inherit" }}
           >
             <div style={{ maxWidth: "600px", padding: `0 2rem 1.45rem` }}>
               <h1 dangerouslySetInnerHTML={{ __html: post.node.title }} />
