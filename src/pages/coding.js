@@ -3,13 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 
 // Images and assets
-import htmlLogo from "../images/html-logo.png"
-import cssLogo from "../images/css3-logo.png"
 import seekr from "../images/seekr.png"
-import gatsbyIcon from "../images/gatsby-icon.png"
-import railsIcon from "../images/rails.png"
-import reactIcon from "../images/react.png"
-import postgresLogo from "../images/postgres.png"
 import tyqcolor from "../images/tyqcolor.png"
 
 const CodingPage = () => {
@@ -27,6 +21,13 @@ const CodingPage = () => {
           </ImageOverlay>
           <TextOverlay>
             <h3>DevPoint Seekr</h3>
+            <p>
+              A web application for keeping track of your job applications
+              during the job hunt. Me and a team of 6 colleagues built this as
+              our "capstone" project while studying full-stack web development at
+              Devpoint Labs
+            </p>
+            <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
           </TextOverlay>
         </ProjectContainer>
         <ProjectContainer>
@@ -37,11 +38,11 @@ const CodingPage = () => {
             <a
               href="https://tyqcolor.com/"
               target="_blank"
-              style={{ textDecoration: "none", color: "black" }}
+              style={{ textDecoration: "none", color: "inherit" }}
             >
               <h3>Ty Q. Color</h3>
               <p style={{ fontSize: "16px" }}>
-                I built this website for my uncle, who does coloring books of
+                A simple website built for Ty Watson, who does coloring books of
                 cool trucks. He wanted something simple that he could use to put
                 all of his coloring books in one place and market to more
                 people.
@@ -51,29 +52,6 @@ const CodingPage = () => {
           </TextOverlay>
         </ProjectContainer>
       </Container>
-      <div>
-        <h3 align="center">Skills and Platforms</h3>
-      </div>
-      <Container>
-        <SkillsContainer>
-          <img src={railsIcon} />
-        </SkillsContainer>
-        <SkillsContainer>
-          <img src={reactIcon} />
-        </SkillsContainer>
-        <SkillsContainer>
-          <img src={gatsbyIcon} />
-        </SkillsContainer>
-        <SkillsContainer>
-          <img src={htmlLogo} />
-        </SkillsContainer>
-        <SkillsContainer>
-          <img src={cssLogo} />
-        </SkillsContainer>
-        <SkillsContainer>
-          <img src={postgresLogo} />
-        </SkillsContainer>
-      </Container>
     </Layout>
   )
 }
@@ -82,7 +60,7 @@ const Tools = styled.span`
   margin: 0.2rem 0.3rem;
   border-radius: 0.3rem;
   font-size: 12px;
-  background-color: #eee;
+  /* background-color: #262626; */
 `
 
 const ImageOverlay = styled.div`
@@ -95,7 +73,7 @@ const TextOverlay = styled.div`
   max-width: 350px;
   text-align: center;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.8s;
 `
 
 const SkillsContainer = styled.div`
@@ -109,15 +87,13 @@ const SkillsContainer = styled.div`
 const ProjectContainer = styled.div`
   max-width: 400px;
   display: flex;
-  margin: 1em;
+  margin: .3em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid gray;
-  box-shadow: 1px 1px 0.5px grey;
 
   &:hover ${ImageOverlay} {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   &:hover ${TextOverlay} {

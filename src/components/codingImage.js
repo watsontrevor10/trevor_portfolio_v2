@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const MusicImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "keyboard.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "desk.JPG" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid

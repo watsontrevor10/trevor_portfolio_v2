@@ -75,7 +75,7 @@ const StyledLink = styled(Link)`
   margin: 5px;
   position: relative;
   max-width: 100%;
-  box-shadow: 1px 5px 5px grey;
+  box-shadow: 1px 5px 5px black;
   transition: 300ms ease-in-out;
   color: white;
 `
