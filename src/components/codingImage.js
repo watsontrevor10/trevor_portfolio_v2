@@ -7,7 +7,7 @@ const MusicImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "desk.JPG" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
