@@ -39,9 +39,8 @@ const CodingPage = () => {
             <Img src={tyqcolor} />
           </ImageOverlay>
           <TextOverlay>
-            <a
-              href="https://tyqcolor.com/"
-              target="_blank"
+            <Link
+              to={"/tyqcolor"}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <h3>Ty Q. Color</h3>
@@ -52,7 +51,7 @@ const CodingPage = () => {
                 people.
               </p>
               <Tools>#Gatsby, #React, #StyledComponents</Tools>
-            </a>
+            </Link>
           </TextOverlay>
         </ProjectContainer>
       </Container>
@@ -63,7 +62,7 @@ const CodingPage = () => {
 const Img = styled.img`
   width: 100% !important;
   height: 430px;
-  transition: transform .2s;
+  transition: transform 0.2s;
 `
 
 const Tools = styled.span`
@@ -94,14 +93,13 @@ const ProjectContainer = styled.div`
   justify-content: center;
   break-inside: avoid-column;
 
-  Img:hover {
-    transform: scale(1.03)
+  img:hover {
+    transform: scale(1.03);
   }
 
   &:hover ${ImageOverlay} {
     opacity: 0.1;
   }
-
 
   &:hover ${TextOverlay} {
     opacity: 1;
