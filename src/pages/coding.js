@@ -10,7 +10,7 @@ import tyqcolor from "../images/tyqcolor.png"
 const CodingPage = () => {
   return (
     <Layout>
-      <div style={{ marginBottom: "1em", borderBottom: "1px solid" }}>
+      <div style={{ marginBottom: "2em", borderBottom: "1px solid" }}>
         <h1 align="center">Web Development</h1>
       </div>
       <Container>
@@ -73,7 +73,7 @@ const ImageOverlay = styled.div`
   position: relative;
   max-width: 595px;
   max-height: 430px;
-  transition: 0.5s;
+  transition: 0.8s;
   opacity: 0.9;
   box-shadow: 1px 5px 5px black;
 `

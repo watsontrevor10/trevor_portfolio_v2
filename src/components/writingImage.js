@@ -16,7 +16,12 @@ const MusicImage = () => {
   `)
   console.log(data)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      // style={{ width: "550px", margin: "auto" }}
+    />
+  )
 }
 
 export default MusicImage

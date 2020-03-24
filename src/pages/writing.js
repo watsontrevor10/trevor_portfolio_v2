@@ -9,7 +9,7 @@ const Writing = ({ data }) => {
       <div
         style={{
           textAlign: "center",
-          marginBottom: "1em",
+          marginBottom: "2em",
           borderBottom: "1px solid",
         }}
       >

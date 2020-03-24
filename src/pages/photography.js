@@ -8,7 +8,7 @@ const PhotoPage = ({ data }) => {
     <Layout>
       {/* <h1>Photography</h1> */}
       <div>
-        <div style={{ textAlign: 'center', marginBottom: '1em', borderBottom: '1px solid' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2em', borderBottom: '1px solid' }}>
           <h1>Photography</h1>
         </div>
         <Photos />

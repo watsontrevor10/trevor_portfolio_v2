@@ -7,77 +7,100 @@ import PhotoImage from "../components/photoImage"
 import MusicImage from "../components/musicImage"
 import WritingImage from "../components/writingImage"
 import SEO from "../components/seo"
-import TextOverlay from "../components/textOverlay"
+// import TextOverlay from "../components/textOverlay"
 
 const IndexPage = () => {
-  const [toggleHover, setToggleHover] = useState(false)
-
-  const hoverImage = () => {
-    setToggleHover(!toggleHover)
-  }
-
   return (
     <Layout>
       <SEO title="Home" />
-      <ImageWrapper>
-        <StyledLink
-          to="/coding"
-          // onMouseEnter={() => hoverImage()}
-          // onMouseLeave={() => hoverImage()}
-        >
-          <CodingImage />
-          {/* {toggleHover ? (
-            <StyleOverlay>
-              <TextOverlay>
-                <h2>Coding</h2>
-              </TextOverlay>
-            </StyleOverlay>
-          ) : (
-            ""
-          )} */}
+      <Container>
+        <StyledLink to={"coding"}>
+          <ImageContainer>
+            <ImageOverlay>
+              <CodingImage />
+            </ImageOverlay>
+            <TextOverlay>
+              <h1>Coding</h1>
+            </TextOverlay>
+          </ImageContainer>
         </StyledLink>
-        <StyledLink to="music">
-          <MusicImage />
+        <StyledLink to={"music"}>
+          <ImageContainer>
+            <ImageOverlay>
+              <MusicImage />
+            </ImageOverlay>
+            <TextOverlay>
+              <h1>Music</h1>
+            </TextOverlay>
+          </ImageContainer>
         </StyledLink>
-        <StyledLink to="photography">
-          <PhotoImage />
+        <StyledLink to={"photography"}>
+          <ImageContainer>
+            <ImageOverlay>
+              <PhotoImage />
+            </ImageOverlay>
+            <TextOverlay>
+              <h1>Photography</h1>
+            </TextOverlay>
+          </ImageContainer>
         </StyledLink>
-        <StyledLink to="writing">
-          <WritingImage />
+        <StyledLink to={"writing"}>
+          <ImageContainer>
+            <ImageOverlay>
+              <WritingImage />
+            </ImageOverlay>
+            <TextOverlay>
+              <h1>Blog</h1>
+            </TextOverlay>
+          </ImageContainer>
         </StyledLink>
-      </ImageWrapper>
+      </Container>
     </Layout>
   )
 }
 
-const ImageWrapper = styled.div`
-  display: Flex;
+const ImageOverlay = styled.div`
   position: relative;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin-top: 2em;
-  .gatsby-image-wrapper {
-    width: 550px;
-    height: auto;
-  }
+  width: 600px;
+  opacity: 1;
+  transition: 0.5s linear;
 `
 
-const StyleOverlay = styled.div`
-  align-items: center;
+const TextOverlay = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  max-width: 350px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s linear;
 `
 
 const StyledLink = styled(Link)`
-  margin: 5px;
+  text-decoration: none;
+  color: inherit;
+`
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  break-inside: avoid-column;
+
+  &:hover ${ImageOverlay} {
+    opacity: 0.1;
+  }
+
+  &:hover ${TextOverlay} {
+    opacity: 1;
+  }
+`
+
+const Container = styled.div`
+  column-count: 2;
+  column-gap: 0;
+  grid-row-gap: 0;
   position: relative;
-  max-width: 100%;
   box-shadow: 1px 5px 5px black;
-  transition: 300ms ease-in-out;
-  color: white;
 `
 
 export default IndexPage
