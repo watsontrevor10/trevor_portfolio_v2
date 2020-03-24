@@ -62,7 +62,7 @@ const CodingPage = () => {
 const Img = styled.img`
   width: 100% !important;
   height: 430px;
-  transition: transform 0.2s;
+  transition: transform 0.2s linear;
 `
 
 const Tools = styled.span`
@@ -93,7 +93,7 @@ const ProjectContainer = styled.div`
   justify-content: center;
   break-inside: avoid-column;
 
-  img:hover {
+  &:hover ${Img} {
     transform: scale(1.03);
   }
 
