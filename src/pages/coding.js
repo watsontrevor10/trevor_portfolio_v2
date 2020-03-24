@@ -16,10 +16,13 @@ const CodingPage = () => {
       <Container>
         <ProjectContainer>
           <ImageOverlay>
-            <img src={seekr} />
+            <Img src={seekr} />
           </ImageOverlay>
           <TextOverlay>
-            <Link to="/seekr" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link
+              to="/seekr"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
               <h3>DevPoint Seekr</h3>
               <p>
                 A web application for keeping track of your job applications
@@ -33,7 +36,7 @@ const CodingPage = () => {
         </ProjectContainer>
         <ProjectContainer>
           <ImageOverlay>
-            <img src={tyqcolor} />
+            <Img src={tyqcolor} />
           </ImageOverlay>
           <TextOverlay>
             <a
@@ -57,16 +60,23 @@ const CodingPage = () => {
   )
 }
 
+const Img = styled.img`
+  width: 100% !important;
+  height: 430px;
+  transition: transform .2s;
+`
+
 const Tools = styled.span`
-  margin: 0.2rem 0.3rem;
-  border-radius: 0.3rem;
   font-size: 12px;
 `
 
 const ImageOverlay = styled.div`
   position: relative;
+  max-width: 595px;
+  max-height: 430px;
   transition: 0.5s;
   opacity: 0.9;
+  box-shadow: 1px 5px 5px black;
 `
 
 const TextOverlay = styled.div`
@@ -77,25 +87,21 @@ const TextOverlay = styled.div`
   transition: 0.8s;
 `
 
-// const SkillsContainer = styled.div`
-//   max-width: 200px;
-//   margin: 1em;
-//   display: flex;
-//   align-items: center;
-//   align-content: center;
-// `
-
 const ProjectContainer = styled.div`
-  max-width: 400px;
   display: flex;
-  margin: 0.3em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  break-inside: avoid-column;
+
+  Img:hover {
+    transform: scale(1.03)
+  }
 
   &:hover ${ImageOverlay} {
     opacity: 0.1;
   }
+
 
   &:hover ${TextOverlay} {
     opacity: 1;
@@ -103,9 +109,10 @@ const ProjectContainer = styled.div`
 `
 
 const Container = styled.div`
-  display: Flex;
-  flex-direction: row-responsive;
-  flex-flow: for wrap;
+  column-count: 2;
+  column-gap: 1em;
+  row-gap: 1em;
+  max-height: 432px;
   position: relative;
 `
 
