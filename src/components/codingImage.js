@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { FaAutoprefixer } from "react-icons/fa"
 
 const MusicImage = () => {
   const data = useStaticQuery(graphql`
@@ -19,7 +20,6 @@ const MusicImage = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{ transition: 'transform 0.8s' }}
     />
   )
 }

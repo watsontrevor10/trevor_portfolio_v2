@@ -10,9 +10,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <FaBars
-      style={{ color: "#e8e8e8", float: "left", size: "5em", margin: "2em" }}
-    />
+    <Link style={{ float: 'right', margin: '30px 30px'}}>About</Link>
     <div
       style={{
         margin: `0 auto`,

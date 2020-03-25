@@ -60,8 +60,8 @@ const IndexPage = () => {
 }
 
 const ImageOverlay = styled.div`
-  position: relative;
-  width: 600px;
+  width: 100%;
+  height: auto;
   opacity: 1;
   transition: 0.5s linear;
 `
@@ -77,6 +77,7 @@ const TextOverlay = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
+
 `
 
 const ImageContainer = styled.div`
@@ -84,7 +85,7 @@ const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  break-inside: avoid-column;
+  
 
   &:hover ${ImageOverlay} {
     opacity: 0.1;
@@ -96,11 +97,11 @@ const ImageContainer = styled.div`
 `
 
 const Container = styled.div`
-  column-count: 2;
-  column-gap: 0;
-  grid-row-gap: 0;
-  position: relative;
-  box-shadow: 1px 5px 5px black;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr 1fr;
+
+  margin-top: 2em;
 `
 
 export default IndexPage

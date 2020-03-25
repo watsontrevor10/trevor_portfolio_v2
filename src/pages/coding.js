@@ -16,7 +16,7 @@ const CodingPage = () => {
       <Container>
         <ProjectContainer>
           <ImageOverlay>
-            <Img src={seekr} />
+            <Img src={seekr} alt="DevPoint Seekr" />
           </ImageOverlay>
           <TextOverlay>
             <Link
@@ -24,19 +24,19 @@ const CodingPage = () => {
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <h3>DevPoint Seekr</h3>
-              <p>
+              <P>
                 A web application for keeping track of your job applications
                 during the job hunt. Me and a team of 6 colleagues built this as
                 our "capstone" project while studying full-stack web development
                 at Devpoint Labs
-              </p>
+              </P>
               <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
             </Link>
           </TextOverlay>
         </ProjectContainer>
         <ProjectContainer>
           <ImageOverlay>
-            <Img src={tyqcolor} />
+            <Img src={tyqcolor} alt="Ty Q. Color" />
           </ImageOverlay>
           <TextOverlay>
             <Link
@@ -44,12 +44,12 @@ const CodingPage = () => {
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <h3>Ty Q. Color</h3>
-              <p style={{ fontSize: "16px" }}>
+              <P>
                 A simple website built for Ty Watson, who does coloring books of
                 cool trucks. He wanted something simple that he could use to put
                 all of his coloring books in one place and market to more
                 people.
-              </p>
+              </P>
               <Tools>#Gatsby, #React, #StyledComponents</Tools>
             </Link>
           </TextOverlay>
@@ -59,9 +59,13 @@ const CodingPage = () => {
   )
 }
 
+const P = styled.p`
+  font-size: 16px;
+`
+
 const Img = styled.img`
   width: 100% !important;
-  height: 430px;
+  height: auto;
   transition: transform 0.2s linear;
 `
 
@@ -71,8 +75,8 @@ const Tools = styled.span`
 
 const ImageOverlay = styled.div`
   position: relative;
-  max-width: 595px;
-  max-height: 430px;
+  max-width: 30em;
+  max-height: auto;
   transition: 0.8s;
   opacity: 0.9;
   box-shadow: 1px 5px 5px black;
@@ -89,9 +93,9 @@ const TextOverlay = styled.div`
 const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex-flow: wrap;
   align-items: center;
   justify-content: center;
-  break-inside: avoid-column;
 
   &:hover ${Img} {
     transform: scale(1.03);
@@ -107,10 +111,11 @@ const ProjectContainer = styled.div`
 `
 
 const Container = styled.div`
-  column-count: 2;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
   column-gap: 1em;
   row-gap: 1em;
-  max-height: 432px;
   position: relative;
 `
 

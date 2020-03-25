@@ -19,7 +19,7 @@ const MusicImage = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      // style={{ width: "550px", margin: "auto" }}
+      style={{ width: "100% !important" }}
     />
   )
 }
