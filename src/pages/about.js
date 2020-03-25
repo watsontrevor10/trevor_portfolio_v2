@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from '../components/seo'
 
 // Images
 import trevor from "../images/trevor.jpg"
@@ -7,6 +8,10 @@ import trevor from "../images/trevor.jpg"
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="about me"
+        description="professional musician, web developer, full-stack developer, photographer"
+      />
       <div
         style={{
           textAlign: "center",
