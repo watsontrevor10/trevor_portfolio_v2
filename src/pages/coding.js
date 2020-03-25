@@ -75,8 +75,7 @@ const Tools = styled.span`
 
 const ImageOverlay = styled.div`
   position: relative;
-  max-width: 30em;
-  max-height: auto;
+  max-width: 550px;
   transition: 0.8s;
   opacity: 0.9;
   box-shadow: 1px 5px 5px black;
@@ -93,7 +92,7 @@ const TextOverlay = styled.div`
 const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-flow: wrap;
+
   align-items: center;
   justify-content: center;
 
@@ -111,12 +110,12 @@ const ProjectContainer = styled.div`
 `
 
 const Container = styled.div`
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  column-gap: 1em;
-  row-gap: 1em;
-  position: relative;
+ display: flex;
+ flex-flow: wrap;
+ column-gap: 1em;
+ flex-direction: row;
+ /* flex-flow: wrap; */
+ justify-content: center;
 `
 
 export default CodingPage

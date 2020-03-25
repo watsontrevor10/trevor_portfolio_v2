@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <Link style={{ float: 'right', margin: '30px 30px'}}>About</Link>
+    <Link to='/about' style={{ position: 'absolute', margin: '30px 30px'}}>About</Link>
     <div
       style={{
         margin: `0 auto`,
