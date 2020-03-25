@@ -76,6 +76,8 @@ const Tools = styled.span`
 const ImageOverlay = styled.div`
   position: relative;
   max-width: 550px;
+  max-height: 400px;
+  overflow: hidden;
   transition: 0.8s;
   opacity: 0.9;
   box-shadow: 1px 5px 5px black;
@@ -84,6 +86,7 @@ const ImageOverlay = styled.div`
 const TextOverlay = styled.div`
   position: absolute;
   max-width: 350px;
+  max-height: 350px;
   text-align: center;
   opacity: 0;
   transition: 0.8s;
@@ -113,8 +116,8 @@ const Container = styled.div`
  display: flex;
  flex-flow: wrap;
  column-gap: 1em;
+ row-gap: 1em;
  flex-direction: row;
- /* flex-flow: wrap; */
  justify-content: center;
 `
 
