@@ -24,16 +24,6 @@ const IndexPage = () => {
             </TextOverlay>
           </ImageContainer>
         </StyledLink>
-        <StyledLink to={"music"}>
-          <ImageContainer>
-            <ImageOverlay>
-              <MusicImage />
-            </ImageOverlay>
-            <TextOverlay>
-              <h1>Music</h1>
-            </TextOverlay>
-          </ImageContainer>
-        </StyledLink>
         <StyledLink to={"photography"}>
           <ImageContainer>
             <ImageOverlay>
@@ -50,7 +40,17 @@ const IndexPage = () => {
               <WritingImage />
             </ImageOverlay>
             <TextOverlay>
-              <h1>Blog</h1>
+              <h1>Writing</h1>
+            </TextOverlay>
+          </ImageContainer>
+        </StyledLink>
+        <StyledLink to={"music"}>
+          <ImageContainer>
+            <ImageOverlay>
+              <MusicImage />
+            </ImageOverlay>
+            <TextOverlay>
+              <h1>Music</h1>
             </TextOverlay>
           </ImageContainer>
         </StyledLink>

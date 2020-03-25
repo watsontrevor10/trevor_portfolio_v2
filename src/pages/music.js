@@ -12,6 +12,9 @@ const MusicPage = () => {
       >
         <h1>Music</h1>
       </div>
+      <div style={{ textAlign: 'center', }}>
+        <p>Coming Soon ... </p>
+      </div>
     </Layout>
   )
 }
