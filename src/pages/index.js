@@ -7,7 +7,6 @@ import PhotoImage from "../components/photoImage"
 import MusicImage from "../components/musicImage"
 import WritingImage from "../components/writingImage"
 import SEO from "../components/seo"
-// import TextOverlay from "../components/textOverlay"
 
 const IndexPage = () => {
   return (
@@ -77,7 +76,6 @@ const TextOverlay = styled.div`
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-
 `
 
 const ImageContainer = styled.div`
@@ -85,7 +83,6 @@ const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
   &:hover ${ImageOverlay} {
     opacity: 0.1;
@@ -97,11 +94,11 @@ const ImageContainer = styled.div`
 `
 
 const Container = styled.div`
- display: grid;
- grid-template-columns: 1fr 1fr;
- grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 
-  margin-top: 2em;
+  /* margin-top: 2em; */
 `
 
 export default IndexPage

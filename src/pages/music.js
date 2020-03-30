@@ -18,8 +18,26 @@ const MusicPage = () => {
       >
         <h1>Music</h1>
       </div>
+      <div style={{ display: 'flex', flexFlow: 'wrap' }}>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/QiufgqQ9mCQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/oZHTrLui76c"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div style={{ textAlign: "center" }}>
-        <p>Coming Soon ... </p>
+        <p>More Coming Soon . . . </p>
       </div>
     </Layout>
   )
