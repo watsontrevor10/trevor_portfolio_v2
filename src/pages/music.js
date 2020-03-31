@@ -52,6 +52,24 @@ const MusicPage = () => {
           <Visit>Visit Site</Visit>
         </a>
       </ProjectContainer>
+      <ProjectContainer>
+        <div style={{ textAlign: "center" }}>
+          <h2>23rd Army Band</h2>
+        </div>
+        <div>
+          <p>
+            I have been performing professionally for the 23rd Army Band for
+            over 10 years. I am currently the Principle Bassist for the whole
+            unit.
+          </p>
+          <p>
+            I perform a wide variety of roles in the unit; bassist and backup
+            singer for the rock band Article 15, leader and bassist for the jazz
+            combo Sensational Seven, and bassist and percussionist for the
+            concert band.
+          </p>
+        </div>
+      </ProjectContainer>
     </Layout>
   )
 }
@@ -74,7 +92,8 @@ const IframeContainer = styled.div`
 `
 
 const ProjectContainer = styled.div`
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 2rem 0 2rem 0;
+  margin: 0 1rem 0 1rem;
   border-top: 1px solid;
 `
 export default MusicPage
