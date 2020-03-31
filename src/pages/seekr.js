@@ -26,7 +26,7 @@ const Seekr = () => {
         </Link>
         <h2>DevPoint Seekr</h2>
       </div>
-      <TextContainer>
+      <div class="prj-text-cont">
         <p>
           Devpoint Seekr is a tool to help with the complexity of the modern day
           job search. We send in so many applications, and it can be difficult
@@ -77,8 +77,8 @@ const Seekr = () => {
           </a>{" "}
           for the graphs on the main page.
         </p>
-      </TextContainer>
-      <ImageContainer>
+      </div>
+      <div class="img-container">
         <img src={seekrmain} alt="DevPoint Seekr Main Page" />
         <img src={seekrkanban} alt="Seekr Kanban board" />
         <img src={seekrmanager} alt="Seekr job search manager" />
@@ -90,22 +90,17 @@ const Seekr = () => {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </ImageContainer>
+      </div>
+      <a
+        href="https://github.com/watsontrevor10/dpl-seekr"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div class="main-btn">GitHub</div>
+      </a>
     </Layout>
   )
 }
-
-const TextContainer = styled.div`
-  max-width: 960px;
-  text-align: center;
-  margin: auto;
-  padding: 15px;
-`
-
-const ImageContainer = styled.div`
-  column-count: 2;
-  column-gap: 0.5em;
-  row-gap: 0.5em;
-`
 
 export default Seekr

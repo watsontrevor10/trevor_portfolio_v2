@@ -1,0 +1,19 @@
+.main-btn {
+  border: 1px solid;
+  width: 8rem;
+  text-align: center;
+  margin: auto;
+}
+
+.img-container {
+  column-count: 2;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+}
+
+.prj-text-cont {
+  max-width: 960px;
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+}

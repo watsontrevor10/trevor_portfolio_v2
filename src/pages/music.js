@@ -55,7 +55,7 @@ const MusicPage = () => {
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Visit>Visit Site</Visit>
+          <div class="main-btn">Visit Site</div>
         </a>
       </ProjectContainer>
       <ProjectContainer>
@@ -82,19 +82,12 @@ const MusicPage = () => {
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Visit>Visit Site</Visit>
+          <div class="main-btn">Visit Site</div>
         </a>
       </ProjectContainer>
     </Layout>
   )
 }
-
-const Visit = styled.div`
-  border: 1px solid;
-  max-width: 10rem;
-  text-align: center;
-  margin: auto;
-`
 
 const IframeContainer = styled.div`
   display: flex;
@@ -111,4 +104,5 @@ const ProjectContainer = styled.div`
   margin: 0 1rem 0 1rem;
   border-top: 1px solid;
 `
+
 export default MusicPage

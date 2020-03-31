@@ -73,8 +73,6 @@ const Button = styled.div`
   border: 1px solid;
   width: 8rem;
   text-align: center;
-
-  
 `
 
 const LinkContainer = styled.div`

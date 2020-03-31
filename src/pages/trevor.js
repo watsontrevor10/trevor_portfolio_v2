@@ -28,7 +28,7 @@ const TrevorWatson = () => {
         </div>
         <h2>Trevor Watson Portfolio</h2>
       </div>
-      <TextContainer>
+      <div class="prj-text-cont">
         <p>
           This is version 2 of my portfolio page. I built this to expand my
           knowledge of Gatsby.js, styled components, CSS transitions and
@@ -36,12 +36,12 @@ const TrevorWatson = () => {
           show that I continue to work on my photography, music and writing as
           well.
         </p>
-      </TextContainer>
-      <ImageContainer>
+      </div>
+      <div class="img-container">
         <Img src={trevormain} alt="Trevor Watson main page" />
         <Img src={trevorwiting} alt="Trevor Watson writing blog page" />
         <Img src={trevorcoding} alt="Trevor Watson web devlepment projects" />
-      </ImageContainer>
+      </div>
       <div
         style={{
           textAlign: "center",
@@ -69,19 +69,6 @@ const Button = styled.div`
 
 const Img = styled.img`
   box-shadow: 1px 2px 2px black;
-`
-
-const TextContainer = styled.div`
-  max-width: 960px;
-  text-align: center;
-  margin: auto;
-  padding: 15px;
-`
-
-const ImageContainer = styled.div`
-  column-count: 2;
-  column-gap: 0.5em;
-  row-gap: 0.5em;
 `
 
 export default TrevorWatson

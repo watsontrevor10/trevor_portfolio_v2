@@ -26,19 +26,19 @@ const TyQ = () => {
         </Link>
         <h2>Ty Q. Watson Coloring</h2>
       </div>
-      <TextContainer>
+      <div class="prj-text-cont">
         <p>
           Ty Watson wanted a simple website where he could market all
           of his coloring books and grow his business. This was a fun site to
           build, I got to use some of my photo editing skills, used Styled
           Components for CSS and also this was my first Gatsby project.
         </p>
-      </TextContainer>
-      <ImageContainer>
+      </div>
+      <div class="img-container">
         <img src={tyqcolor} alt="Tyqcolor.com main page" />
         <img src={tyqabout} alt="tyqcolor.com about page" />
         <img src={tyqdrawings} alt="tyqcolor.com drawings" />
-      </ImageContainer>
+      </div>
       <div
         style={{
           textAlign: "center",
@@ -53,28 +53,11 @@ const TyQ = () => {
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Button>Visit Site</Button>
+          <div class='main-btn'>Visit Site</div>
         </a>
       </div>
     </Layout>
   )
 }
-
-const Button = styled.div`
-  border: 1px solid;
-`
-
-const TextContainer = styled.div`
-  max-width: 960px;
-  text-align: center;
-  margin: auto;
-  padding: 15px;
-`
-
-const ImageContainer = styled.div`
-  column-count: 2;
-  column-gap: 0.5em;
-  row-gap: 0.5em;
-`
 
 export default TyQ
