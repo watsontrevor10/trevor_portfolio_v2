@@ -41,7 +41,7 @@ const TyQ = () => {
       <div
         style={{
           textAlign: "center",
-          maxWidth: "200px",
+          maxWidth: "10rem",
           marginLeft: "auto",
           marginRight: "auto",
         }}
