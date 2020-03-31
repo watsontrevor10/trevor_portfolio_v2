@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 // Images and assets
 import seekr from "../images/seekr.png"
 import tyqcolor from "../images/tyqcolor.png"
+import trevormain from "../images/trevor-main-page.png"
 
 const CodingPage = () => {
   return (
@@ -19,10 +20,7 @@ const CodingPage = () => {
             <Img src={seekr} alt="DevPoint Seekr" />
           </ImageOverlay>
           <TextOverlay>
-            <Link
-              to="/seekr"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+            <StyledLink to="/seekr">
               <h3>DevPoint Seekr</h3>
               <P>
                 A web application for keeping track of your job applications
@@ -31,7 +29,7 @@ const CodingPage = () => {
                 at Devpoint Labs
               </P>
               <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
-            </Link>
+            </StyledLink>
           </TextOverlay>
         </ProjectContainer>
         <ProjectContainer>
@@ -39,10 +37,7 @@ const CodingPage = () => {
             <Img src={tyqcolor} alt="Ty Q. Color" />
           </ImageOverlay>
           <TextOverlay>
-            <Link
-              to={"/tyqcolor"}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+            <StyledLink to={"/tyqcolor"}>
               <h3>Ty Q. Color</h3>
               <P>
                 A simple website built for Ty Watson, who does coloring books of
@@ -51,7 +46,27 @@ const CodingPage = () => {
                 people.
               </P>
               <Tools>#Gatsby, #React, #StyledComponents</Tools>
-            </Link>
+            </StyledLink>
+          </TextOverlay>
+        </ProjectContainer>
+        <ProjectContainer>
+          <ImageOverlay>
+            <Img src={trevormain} alt="Trevor Watson main page" />
+          </ImageOverlay>
+          <TextOverlay>
+            <StyledLink to={"/trevor"}>
+              <h3>Trevor Watson</h3>
+              <P>
+                Version 2 of my portfolio website. I dove into custom CSS using
+                styled components, and did much more with API's to pull in data
+                from Wordpress and Instagram. This site represents my increasing
+                ability as a developer and my interest in many subjects.
+              </P>
+              <Tools>
+                #Gatsby, #React, #StyledComponents, #GraphQL, #InstagramAPI,
+                #WordpressAPI, #HeadlessBlog
+              </Tools>
+            </StyledLink>
           </TextOverlay>
         </ProjectContainer>
       </Container>
@@ -71,6 +86,11 @@ const Img = styled.img`
 
 const Tools = styled.span`
   font-size: 12px;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `
 
 const ImageOverlay = styled.div`
@@ -113,12 +133,12 @@ const ProjectContainer = styled.div`
 `
 
 const Container = styled.div`
- display: flex;
- flex-flow: wrap;
- column-gap: 1em;
- row-gap: 1em;
- flex-direction: row;
- justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  column-gap: 1em;
+  row-gap: 1em;
+  flex-direction: row;
+  justify-content: center;
 `
 
 export default CodingPage

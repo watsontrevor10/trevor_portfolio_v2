@@ -4,12 +4,6 @@ import styled from "styled-components"
 
 const Sidebar = props => {
 
-  // function openNav(props) {
-  //   props.displaySidebar
-  //     ? (document.getElementById("sideNav").style.width = "15rem")
-  //     : (document.getElementById("sideNav").style.width = "0rem")
-  // }
-
   return (
     <SidebarContainer id="sideNav">
       <CloseButton onClick={props.displaySidebar}>&times;</CloseButton>
@@ -31,7 +25,7 @@ const SidebarContainer = styled.div`
   overflow-x: hidden;
   background-color: #151616;
   transition: margin-left 0.8s;
-  opacity: 0.95;
+  opacity: 0.97;
 `
 
 const StyledLink = styled(Link)`
@@ -44,7 +38,7 @@ const StyledLink = styled(Link)`
   transition: 0.3s linear;
 
   &:hover {
-    color: #aaaaaa;
+    color: #666666;
   }
 `
 

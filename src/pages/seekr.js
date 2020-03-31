@@ -12,7 +12,9 @@ const Seekr = () => {
   return (
     <Layout>
       <div>
-        <Link to={"/coding"} style={{ float: 'right' }}>Back</Link>
+        <Link to={"/coding"} style={{ float: "right" }}>
+          Back
+        </Link>
       </div>
       <div
         style={{
@@ -76,9 +78,9 @@ const Seekr = () => {
         </p>
       </TextContainer>
       <ImageContainer>
-        <img src={seekrmain} />
-        <img src={seekrkanban} />
-        <img src={seekrmanager} />
+        <img src={seekrmain} alt="DevPoint Seekr Main Page" />
+        <img src={seekrkanban} alt="Seekr Kanban board" />
+        <img src={seekrmanager} alt="Seekr job search manager" />
         <iframe
           width="100%"
           height="480px"
@@ -101,8 +103,8 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   column-count: 2;
-  column-gap: .5em;
-  row-gap: .5em;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
 `
 
 export default Seekr

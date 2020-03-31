@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
@@ -95,10 +95,10 @@ const ImageContainer = styled.div`
 
 const Container = styled.div`
   display: grid;
+  width: 100% !important;
+  box-shadow: 1px 3px 3px black;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
-  /* margin-top: 2em; */
 `
 
 export default IndexPage

@@ -9,7 +9,7 @@ const MusicPage = () => {
         title="music"
         description="Music of Trevor Watson, bass, jazz improv, jazz bassist"
       />
-      <div
+      {/* <div
         style={{
           textAlign: "center",
           marginBottom: "2em",
@@ -17,9 +17,10 @@ const MusicPage = () => {
         }}
       >
         <h1>Music</h1>
-      </div>
-      <div style={{ display: 'flex', flexFlow: 'wrap', height: '460px' }}>
+      </div> */}
+      <div style={{ display: "flex", flexFlow: "wrap", height: "460px", paddingTop: '2em' }}>
         <iframe
+          title="CoronaCollab #1"
           width="50%"
           height="100%"
           src="https://www.youtube.com/embed/QiufgqQ9mCQ"
@@ -28,6 +29,7 @@ const MusicPage = () => {
           allowfullscreen
         ></iframe>
         <iframe
+          title="Recorda-me"
           width="50%"
           height="100%"
           src="https://www.youtube.com/embed/oZHTrLui76c"

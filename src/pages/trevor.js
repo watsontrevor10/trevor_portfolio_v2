@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 
 // Images
-import tyqcolor from "../images/tyqcolor.png"
-import tyqdrawings from "../images/tyqDrawings.png"
-import tyqabout from "../images/tyqAbout.png"
+import trevormain from "../images/trevor-main-page.png"
+import trevorwiting from "../images/trevor-writing.png"
+import trevorcoding from "../images/trevor-coding.png"
 
-const TyQ = () => {
+const TrevorWatson = () => {
   return (
     <Layout>
       <div>
@@ -27,16 +27,17 @@ const TyQ = () => {
       </div>
       <TextContainer>
         <p>
-          My uncle, Ty Watson wanted a simple website where he could market all
-          of his coloring books and grow his business. This was a fun site to
-          build, I got to use some of my photo editing skills, used Styled
-          Components for CSS and also this was my first Gatsby project.
+          This is version 2 of my portfolio page. I built this to expand my
+          knowledge of Gatsby.js, styled components, CSS transitions and
+          animations, and to showcase not just my development projects, but to
+          show that I continue to work on my photography, music and writing as
+          well.
         </p>
       </TextContainer>
       <ImageContainer>
-        <img src={tyqcolor} alt="Tyqcolor.com main page" />
-        <img src={tyqabout} alt="tyqcolor.com about page" />
-        <img src={tyqdrawings} alt="tyqcolor.com drawings" />
+        <Img src={trevormain} alt="Trevor Watson main page" />
+        <Img src={trevorwiting} alt="Trevor Watson writing blog page" />
+        <Img src={trevorcoding} alt="Trevor Watson web devlepment projects" />
       </ImageContainer>
       <div
         style={{
@@ -63,6 +64,10 @@ const Button = styled.div`
   border: 1px solid;
 `
 
+const Img = styled.img`
+  box-shadow: 1px 2px 2px black;
+`
+
 const TextContainer = styled.div`
   max-width: 960px;
   text-align: center;
@@ -76,4 +81,4 @@ const ImageContainer = styled.div`
   row-gap: 0.5em;
 `
 
-export default TyQ
+export default TrevorWatson

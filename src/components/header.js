@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { FaBars } from "react-icons/fa"
 import Sidebar from "./sidebar"
-import styled, { keyframes } from "styled-components"
 
 const Header = ({ siteTitle }) => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -62,19 +61,5 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-// const fadeIn = keyframes`
-//     from {
-//       opacity: 0;
-//     }
-
-//     to {
-//       opacity: .98;
-//     }
-// `
-
-// const AppearSidebar = styled.div`
-//   animation: ${fadeIn} .3s linear;
-// `
 
 export default Header
