@@ -7,16 +7,6 @@ const Writing = ({ data }) => {
   return (
     <Layout>
       <SEO title="Writing" />
-      {/* <div
-        style={{
-          textAlign: "center",
-          marginBottom: "2em",
-          borderBottom: "1px solid",
-        }}
-      >
-        <h1>Blog</h1>
-      </div> */}
-
       <div
         style={{
           display: "flex",
@@ -30,11 +20,11 @@ const Writing = ({ data }) => {
         {data.allWordpressPost.edges.map(post => (
           <Link
             to={"/post/" + post.node.slug}
-            key={post.id}
+            key={post.node.id}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <div style={{ maxWidth: "500px", padding: `0 1rem 1rem` }}>
-              <h1 dangerouslySetInnerHTML={{ __html: post.node.title }} />
+            <div style={{ maxWidth: "500px", padding: `0 1rem 1rem 1rem` }}>
+              <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
               <p>{post.node.date}</p>
               <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
             </div>
@@ -47,7 +37,7 @@ const Writing = ({ data }) => {
 
 export const query = graphql`
   query {
-    allWordpressPost {
+    allWordpressPost(limit: 12) {
       edges {
         node {
           id

@@ -10,7 +10,7 @@ const PhotoPage = ({ data }) => {
       <SEO title="Photography" />
       <div>
         <div style={{ textAlign: 'center', marginBottom: '2em', borderBottom: '1px solid' }}>
-          <h2>Instagram</h2>
+          <h1>Photography</h1>
         </div>
         <Photos />
       </div>

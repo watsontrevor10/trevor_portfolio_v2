@@ -13,7 +13,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Container>
-        <StyledLink to={"coding"}>
+        <StyledLink to={"/coding"}>
           <ImageContainer>
             <ImageOverlay>
               <CodingImage />
@@ -23,7 +23,7 @@ const IndexPage = () => {
             </TextOverlay>
           </ImageContainer>
         </StyledLink>
-        <StyledLink to={"photography"}>
+        <StyledLink to={"/photography"}>
           <ImageContainer>
             <ImageOverlay>
               <PhotoImage />
@@ -33,7 +33,7 @@ const IndexPage = () => {
             </TextOverlay>
           </ImageContainer>
         </StyledLink>
-        <StyledLink to={"writing"}>
+        <StyledLink to={"/writing"}>
           <ImageContainer>
             <ImageOverlay>
               <WritingImage />
@@ -43,7 +43,7 @@ const IndexPage = () => {
             </TextOverlay>
           </ImageContainer>
         </StyledLink>
-        <StyledLink to={"music"}>
+        <StyledLink to={"/music"}>
           <ImageContainer>
             <ImageOverlay>
               <MusicImage />

@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 const MusicPage = () => {
   return (
@@ -18,10 +19,20 @@ const MusicPage = () => {
       >
         <h1>Music</h1>
       </div> */}
-      <div style={{ display: "flex", flexFlow: "wrap", height: "460px", paddingTop: '2em' }}>
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "wrap",
+          justifyContent: "center",
+          columnGap: "1rem",
+          height: "20rem",
+          width: "100%",
+          paddingTop: "2em",
+        }}
+      >
         <iframe
           title="CoronaCollab #1"
-          width="50%"
+          width="550rem"
           height="100%"
           src="https://www.youtube.com/embed/QiufgqQ9mCQ"
           frameborder="0"
@@ -30,16 +41,13 @@ const MusicPage = () => {
         ></iframe>
         <iframe
           title="Recorda-me"
-          width="50%"
+          width="550rem"
           height="100%"
           src="https://www.youtube.com/embed/oZHTrLui76c"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </div>
-      <div style={{ textAlign: "center" }}>
-        <p>More Coming Soon . . . </p>
       </div>
     </Layout>
   )

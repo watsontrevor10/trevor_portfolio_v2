@@ -3,9 +3,10 @@ import styled from "styled-components"
 
 const Contact = () => {
   return (
-    <form>
+    <form name="contact" method="post" data-netlify-honeypot="bot-field">
       <ContactContainer>
-        <h2 style={{  }}>Contact Me</h2>
+        <h2>Contact Me</h2>
+        <input type="hidden" name="form-name" value="contact" />
         <Input type="text" name="name" placeholder="Name" />
         <Input type="text" name="email" placeholder="Email" />
         <Text name="message" placeholder="Your Message" />

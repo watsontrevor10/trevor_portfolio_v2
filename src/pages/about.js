@@ -13,17 +13,19 @@ const About = () => {
         title="about me"
         description="professional musician, web developer, full-stack developer, photographer"
       />
-      <div style={{ margin: "4rem 3rem 0 3rem" }}>
+      <div style={{ padding: "1em 4em 0 4em", textAlign: "center" }}>
+        <h3>
+          I am passionate about learning new things and solving problems in
+          creative ways.
+        </h3>
+      </div>
+      <div style={{ padding: "1rem 2rem 0 2rem" }}>
         <div
-          style={{ maxWidth: "350px", float: "left", margin: "0 2em 0 1em" }}
+          style={{ maxWidth: "250px", float: "left", padding: "0 1em 0 1em" }}
         >
           <img src={trevor} alt="Trevor Watson with a Bass" />
         </div>
-        <div style={{ margin: "0 4em 1em 4em" }}>
-          <h3>
-            I am passionate about learning new things and solving problems in a
-            creative way.
-          </h3>
+        <div style={{ padding: "0 1em 1em .5em" }}>
           <p>
             I am a professional musician and web developer, budding
             photographer, wannabe writer/author, avid learner, and most
