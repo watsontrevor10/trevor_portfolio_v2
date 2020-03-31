@@ -18,18 +18,18 @@ const MusicPage = () => {
       >
         <h1>Music</h1>
       </div>
-      <div style={{ display: 'flex', flexFlow: 'wrap' }}>
+      <div style={{ display: 'flex', flexFlow: 'wrap', height: '460px' }}>
         <iframe
-          width="560"
-          height="315"
+          width="50%"
+          height="100%"
           src="https://www.youtube.com/embed/QiufgqQ9mCQ"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
         <iframe
-          width="560"
-          height="315"
+          width="50%"
+          height="100%"
           src="https://www.youtube.com/embed/oZHTrLui76c"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

@@ -7,7 +7,7 @@ const Writing = ({ data }) => {
   return (
     <Layout>
       <SEO title="Writing" />
-      <div
+      {/* <div
         style={{
           textAlign: "center",
           marginBottom: "2em",
@@ -15,7 +15,7 @@ const Writing = ({ data }) => {
         }}
       >
         <h1>Blog</h1>
-      </div>
+      </div> */}
 
       <div
         style={{
@@ -23,6 +23,7 @@ const Writing = ({ data }) => {
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "center",
+          marginTop: "4rem"
         }}
       >
         {/* Blog Posts */}

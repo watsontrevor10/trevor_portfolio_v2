@@ -11,7 +11,7 @@ const CodingPage = () => {
   return (
     <Layout>
       <div style={{ marginBottom: "2em", borderBottom: "1px solid" }}>
-        <h1 align="center">Web Development</h1>
+        <h1 align="center">Projects</h1>
       </div>
       <Container>
         <ProjectContainer>

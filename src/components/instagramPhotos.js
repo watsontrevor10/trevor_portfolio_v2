@@ -7,7 +7,7 @@ const Instagram = () => (
   <StaticQuery
     query={graphql`
       query {
-        allInstaNode(sort: { fields: likes, order: DESC }, limit: 12) {
+        allInstaNode(sort: { fields: likes, order: DESC }) {
           edges {
             node {
               id
@@ -19,7 +19,6 @@ const Instagram = () => (
                     originalImg
                   }
                 }
-                url
               }
             }
           }
