@@ -9,8 +9,8 @@ const PhotoPage = ({ data }) => {
     <Layout>
       <SEO title="Photography" />
       <div>
-        <div style={{ textAlign: 'center', marginBottom: '2em', borderBottom: '1px solid' }}>
-          <h2>Photography</h2>
+        <div class="callout">
+          <h2 class="callout-txt">Photography</h2>
         </div>
         <Photos />
       </div>

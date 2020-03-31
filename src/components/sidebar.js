@@ -44,7 +44,7 @@ const StyledLink = styled(Link)`
 
 const CloseButton = styled.p`
   position: absolute;
-  top: 0;
+  top: 0.2em;
   right: 0.3rem;
   font-size: 40px;
   margin-left: 1rem;

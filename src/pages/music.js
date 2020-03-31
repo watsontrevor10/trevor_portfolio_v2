@@ -10,10 +10,12 @@ const MusicPage = () => {
         title="music"
         description="Music of Trevor Watson, bass, jazz improv, jazz bassist"
       />
+      <div style={{ display: "flex", flexDirection: "column"}}>
+
       <IframeContainer>
         <iframe
           title="CoronaCollab #1"
-          width="550rem"
+          width="50%"
           height="100%"
           src="https://www.youtube.com/embed/QiufgqQ9mCQ"
           frameborder="0"
@@ -22,7 +24,7 @@ const MusicPage = () => {
         ></iframe>
         <iframe
           title="Recorda-me"
-          width="550rem"
+          width="50%"
           height="100%"
           src="https://www.youtube.com/embed/oZHTrLui76c"
           frameborder="0"
@@ -85,23 +87,22 @@ const MusicPage = () => {
           <div class="main-btn">Visit Site</div>
         </a>
       </ProjectContainer>
+      </div>
     </Layout>
   )
 }
 
 const IframeContainer = styled.div`
   display: flex;
-  flex-flow: wrap;
-  justify-content: center;
   column-gap: 1rem;
-  height: 20rem;
-  width: 100%;
+  height: 20em;
+  width: auto;
   padding: 2rem 1rem 2.5rem 1rem;
 `
 
 const ProjectContainer = styled.div`
   padding: 2rem 0 2rem 0;
-  margin: 0 1rem 0 1rem;
+  margin: 1rem, 1rem 0 1rem;
   border-top: 1px solid;
 `
 

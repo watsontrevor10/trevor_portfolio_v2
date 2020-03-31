@@ -14,8 +14,8 @@ const About = () => {
         title="about me"
         description="professional musician, web developer, full-stack developer, photographer"
       />
-      <div style={{ padding: "1em 4em 0 4em", textAlign: "center" }}>
-        <h3>
+      <div class="callout">
+        <h3 class="callout-txt">
           I am passionate about learning new things and solving problems in
           creative ways.
         </h3>

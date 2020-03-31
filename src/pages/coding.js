@@ -11,8 +11,8 @@ import trevormain from "../images/trevor-main-page.png"
 const CodingPage = () => {
   return (
     <Layout>
-      <div style={{ marginBottom: "2em", borderBottom: "1px solid" }}>
-        <h2 align="center">Projects</h2>
+      <div class="callout">
+        <h2 class="callout-txt">Projects</h2>
       </div>
       <Container>
         <ProjectContainer>

@@ -17,3 +17,16 @@
   margin: auto;
   padding: 15px;
 }
+
+.callout {
+  padding: 1em 4em 0 4em;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: #6c7a89;
+  border-radius: 8px;
+}
+
+.callout-txt {
+  padding-bottom: .9em;
+}
