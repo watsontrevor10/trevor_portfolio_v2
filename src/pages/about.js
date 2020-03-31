@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
+import styled from "styled-components"
 
 // Images
 import trevor from "../images/trevor.jpg"
@@ -42,6 +43,24 @@ const About = () => {
             have the potential build amazing things.
           </p>
         </div>
+        <LinkContainer>
+          <a
+            href="https://www.linkedin.com/in/trevorjwatson/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Button>LinkedIn</Button>
+          </a>
+          <a
+            href="https://github.com/watsontrevor10"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Button>GitHub</Button>
+          </a>
+        </LinkContainer>
         <div style={{}}>
           <Contact />
         </div>
@@ -49,5 +68,21 @@ const About = () => {
     </Layout>
   )
 }
+
+const Button = styled.div`
+  border: 1px solid;
+  width: 8rem;
+  text-align: center;
+
+  
+`
+
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+  justify-content: center;
+  padding: .25rem;
+`
 
 export default About
