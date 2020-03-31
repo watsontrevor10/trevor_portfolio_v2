@@ -28,55 +28,54 @@ const Seekr = () => {
       </div>
       <div class="prj-text-cont">
         <p>
-          Devpoint Seekr is a tool to help with the complexity of the modern day
+          Devpoint Seekr is a tool to help with the complexity of the modern-day
           job search. We send in so many applications, and it can be difficult
           to keep track of everything. My team and I built this tool as part of
-          DevPoint Labs curriculum. This was our final project, which we had
-          about 3 weeks to complete the full-stack development of the product.
+          DevPoint Labs curriculum to help job Seekr's keep track of their job
+          applications. This was our final project, which we had about 3 weeks
+          to complete the full-stack development of the product.
         </p>
-        <p>
-          We used{" "}
+        <span>
           <a
             href="https://rubyonrails.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ruby on Rails
-          </a>{" "}
-          for the backend,{" "}
+            #RubyonRails
+          </a>
+          {", "}
           <a
             href="https://www.postgresql.org/about/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            PostgreSQL
-          </a>{" "}
-          for the database,{" "}
+            #PostgreSQL
+          </a>
+          {", "}
           <a
             href="https://reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            React.js
-          </a>{" "}
-          for front-end with{" "}
+            #React
+          </a>
+          {", "}
           <a
             href="https://sass-lang.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Sass
-          </a>{" "}
-          for CSS design, and{" "}
+            #Sass
+          </a>
+          {", "}
           <a
             href="https://sass-lang.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Recharts
-          </a>{" "}
-          for the graphs on the main page.
-        </p>
+            #Recharts
+          </a>
+        </span>
       </div>
       <div class="img-container">
         <img src={seekrmain} alt="DevPoint Seekr Main Page" />

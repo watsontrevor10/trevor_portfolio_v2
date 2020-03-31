@@ -19,12 +19,13 @@
 }
 
 .callout {
-  padding: 1em 4em 0 4em;
+  padding: 1em 1em 0 1em;
   text-align: center;
   margin: auto;
-  width: 90%;
-  background-color: #6c7a89;
+  width: 70%;
+  background-color: #708090;
   border-radius: 8px;
+  box-shadow: 1px 2px 2px black;
 }
 
 .callout-txt {

@@ -51,9 +51,9 @@ const Instagram = () => (
 )
 
 const MainContainer = styled.div`
-  line-height: 0;
   column-count: 3;
   column-gap: 0px;
+  line-height: 0;
 `
 
 const ImageContainer = styled.div`

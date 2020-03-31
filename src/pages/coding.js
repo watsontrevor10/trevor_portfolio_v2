@@ -57,10 +57,11 @@ const CodingPage = () => {
             <StyledLink to={"/trevor"}>
               <h3>Trevor Watson</h3>
               <P>
-                Version 2 of my portfolio website. I dove into custom CSS using
-                styled components, and did much more with API's to pull in data
-                from Wordpress and Instagram. This site represents my increasing
-                ability as a developer and my interest in many subjects.
+                For version 2 of my portfolio website I wanted to portray myself
+                as more than just a web developer. We are all more than just our
+                jobs, and I hope that this site helps you see the many things
+                that I do that make up who I am and influence my design and
+                coding decisions.
               </P>
               <Tools>
                 #Gatsby, #React, #StyledComponents, #GraphQL, #InstagramAPI,

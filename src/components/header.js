@@ -22,8 +22,8 @@ const Header = ({ siteTitle }) => {
         <div
           style={{
             position: "absolute",
-            top: "1.5em",
-            left: "2em",
+            top: "1.8em",
+            left: "3em",
             cursor: "pointer",
           }}
         >
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
             padding: `1rem 0`,
           }}
         >
-          <h1 style={{ margin: 0, textAlign: "center" }}>
+          <h1 style={{ margin: 0, textAlign: "left" }}>
             <Link
               to="/"
               style={{

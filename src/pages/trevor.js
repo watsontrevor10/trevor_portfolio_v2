@@ -31,12 +31,50 @@ const TrevorWatson = () => {
       </div>
       <div class="prj-text-cont">
         <p>
-          This is version 2 of my portfolio page. I built this to expand my
-          knowledge of Gatsby.js, styled components, CSS transitions and
-          animations, and to showcase not just my development projects, but to
-          show that I continue to work on my photography, music and writing as
-          well.
+          This is version 2 of my portfolio page. I built this as a way to show
+          the diversity of interests I have through now only the design of the
+          site but the content as well.
         </p>
+        <p>
+          I wanted to expand my knowledge of GraphQL, custom CSS, and give my
+          portfolio a more polished and professional look. This site represents
+          not just my expanding knowledge of coding and design, but the variety
+          of interests that I have, and gives me one place to showcase those
+          interests.
+        </p>
+        <span>
+          <a
+            href="https://www.gatsbyjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #Gatsby
+          </a>
+          {", "}
+          <a
+            href="https://www.postgresql.org/about/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #React
+          </a>
+          {", "}
+          <a
+            href="https://styled-components.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #StyledComponents
+          </a>
+          {", "}
+          <a
+            href="https://graphql.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #GraphQL
+          </a>
+        </span>
       </div>
       <div class="img-container">
         <Img src={trevormain} alt="Trevor Watson main page" />
