@@ -42,6 +42,12 @@ const MusicPage = () => {
             reimagined jazz standards and familiar tunes, the trio creates a
             classy atmosphere for any occasion.
           </p>
+          <p>
+            Three Sharp was formed as pianist Ammon Doman, drummer Matt Tippetts
+            reunited after many years. We had each performed with one another in
+            college, but never in the same group. We decided to jam one day long
+            after we had all graduated, and we have been a group ever since.
+          </p>
         </div>
         <a
           href="https://www.threesharp.com"
@@ -59,16 +65,25 @@ const MusicPage = () => {
         <div>
           <p>
             I have been performing professionally for the 23rd Army Band for
-            over 10 years. I am currently the Principle Bassist for the whole
-            unit.
+            over 10 years. I am currently the Principle Bassist.
           </p>
           <p>
             I perform a wide variety of roles in the unit; bassist and backup
             singer for the rock band Article 15, leader and bassist for the jazz
             combo Sensational Seven, and bassist and percussionist for the
-            concert band.
+            concert band. I also perform other duties such as social media
+            promotion, mentoring fellow soldiers, logistics, and event
+            coordination.
           </p>
         </div>
+        <a
+          href="https://www.facebook.com/23rdarmyband"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <Visit>Visit Site</Visit>
+        </a>
       </ProjectContainer>
     </Layout>
   )

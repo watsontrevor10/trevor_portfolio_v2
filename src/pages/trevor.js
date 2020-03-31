@@ -11,11 +11,6 @@ import trevorcoding from "../images/trevor-coding.png"
 const TrevorWatson = () => {
   return (
     <Layout>
-      <div>
-        <Link to={"/coding"} style={{ float: "right" }}>
-          Back
-        </Link>
-      </div>
       <div
         style={{
           textAlign: "center",
@@ -23,7 +18,15 @@ const TrevorWatson = () => {
           marginBottom: "1em",
         }}
       >
-        <h1>Ty Q. Watson Coloring Books</h1>
+        <div>
+          <Link
+            to={"/coding"}
+            style={{ position: "absolute", top: "6.5em", right: "1em" }}
+          >
+            Back
+          </Link>
+        </div>
+        <h2>Trevor Watson Portfolio</h2>
       </div>
       <TextContainer>
         <p>
@@ -48,7 +51,7 @@ const TrevorWatson = () => {
         }}
       >
         <a
-          href="https://tyqcolor.com/"
+          href="https://trevorwatson.me/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}

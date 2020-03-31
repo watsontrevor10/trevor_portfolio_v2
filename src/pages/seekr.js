@@ -11,11 +11,6 @@ import seekrkanban from "../images/seekr-kanban.png"
 const Seekr = () => {
   return (
     <Layout>
-      <div>
-        <Link to={"/coding"} style={{ float: "right" }}>
-          Back
-        </Link>
-      </div>
       <div
         style={{
           textAlign: "center",
@@ -23,7 +18,13 @@ const Seekr = () => {
           marginBottom: "1em",
         }}
       >
-        <h1>DevPoint Seekr</h1>
+        <Link
+          to={"/coding"}
+          style={{ position: "absolute", top: "6.5em", right: "1em" }}
+        >
+          Back
+        </Link>
+        <h2>DevPoint Seekr</h2>
       </div>
       <TextContainer>
         <p>

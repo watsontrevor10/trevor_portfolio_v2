@@ -11,11 +11,6 @@ import tyqabout from "../images/tyqAbout.png"
 const TyQ = () => {
   return (
     <Layout>
-      <div>
-        <Link to={"/coding"} style={{ float: "right" }}>
-          Back
-        </Link>
-      </div>
       <div
         style={{
           textAlign: "center",
@@ -23,11 +18,17 @@ const TyQ = () => {
           marginBottom: "1em",
         }}
       >
-        <h1>Ty Q. Watson Coloring Books</h1>
+        <Link
+          to={"/coding"}
+          style={{ position: "absolute", top: "6.5em", right: "1em" }}
+        >
+          Back
+        </Link>
+        <h2>Ty Q. Watson Coloring</h2>
       </div>
       <TextContainer>
         <p>
-          My uncle, Ty Watson wanted a simple website where he could market all
+          Ty Watson wanted a simple website where he could market all
           of his coloring books and grow his business. This was a fun site to
           build, I got to use some of my photo editing skills, used Styled
           Components for CSS and also this was my first Gatsby project.

@@ -23,7 +23,7 @@ const Writing = ({ data }) => {
             key={post.node.id}
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <div style={{ maxWidth: "500px", padding: `0 1rem 1rem 1rem` }}>
+            <div style={{ maxWidth: "500px", padding: `0 .5rem 1rem .5rem` }}>
               <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
               <p>{post.node.date}</p>
               <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
