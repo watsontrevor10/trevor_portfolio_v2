@@ -50,7 +50,7 @@ const About = () => {
             rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Button>LinkedIn</Button>
+            <div class="main-btn">LinkedIn</div>
           </a>
           <a
             href="https://github.com/watsontrevor10"
@@ -58,7 +58,7 @@ const About = () => {
             rel="noopener noreferrer"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <Button>GitHub</Button>
+            <div class="main-btn">GitHub</div>
           </a>
         </LinkContainer>
         <div style={{}}>
@@ -68,12 +68,6 @@ const About = () => {
     </Layout>
   )
 }
-
-const Button = styled.div`
-  border: 1px solid;
-  width: 8rem;
-  text-align: center;
-`
 
 const LinkContainer = styled.div`
   display: flex;

@@ -84,7 +84,7 @@ const Seekr = () => {
         <img src={seekrmanager} alt="Seekr job search manager" />
         <iframe
           width="100%"
-          height="480px"
+          height="400em"
           src="https://www.youtube.com/embed/Dps7caZ1CaQ"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

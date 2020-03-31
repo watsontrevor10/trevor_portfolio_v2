@@ -7,6 +7,7 @@ import styled from "styled-components"
 import trevormain from "../images/trevor-main-page.png"
 import trevorwiting from "../images/trevor-writing.png"
 import trevorcoding from "../images/trevor-coding.png"
+import seekr from "../images/seekr-project.png"
 
 const TrevorWatson = () => {
   return (
@@ -41,6 +42,7 @@ const TrevorWatson = () => {
         <Img src={trevormain} alt="Trevor Watson main page" />
         <Img src={trevorwiting} alt="Trevor Watson writing blog page" />
         <Img src={trevorcoding} alt="Trevor Watson web devlepment projects" />
+        <Img src={seekr} alt="DevPoint Seekr full-stack job search tool" />
       </div>
       <div
         style={{
