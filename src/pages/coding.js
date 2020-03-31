@@ -12,7 +12,7 @@ const CodingPage = () => {
   return (
     <Layout>
       <div style={{ marginBottom: "2em", borderBottom: "1px solid" }}>
-        <h1 align="center">Projects</h1>
+        <h2 align="center">Projects</h2>
       </div>
       <Container>
         <ProjectContainer>
