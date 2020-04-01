@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 
 // Images
-import seekrmain from "../images/seekr.png"
-import seekrmanager from "../images/seekr-manager.png"
-import seekrkanban from "../images/seekr-kanban.png"
+import seekrmain from "../images/seekr.PNG"
+import seekrmanager from "../images/seekr-manager.PNG"
+import seekrkanban from "../images/seekr-kanban.PNG"
 
 const Seekr = () => {
   return (

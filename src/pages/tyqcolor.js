@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 // Images
-import tyqcolor from "../images/tyqcolor.png"
-import tyqdrawings from "../images/tyqDrawings.png"
-import tyqabout from "../images/tyqAbout.png"
+import tyqcolor from "../images/tyqcolor.PNG"
+import tyqdrawings from "../images/tyqDrawings.PNG"
+import tyqabout from "../images/tyqAbout.PNG"
 
 const TyQ = () => {
   return (
