@@ -5,8 +5,9 @@ import styled from "styled-components"
 
 // Images
 import seekrmain from "../images/seekr.png"
-import seekrmanager from "../images/seekr-manager.PNG"
-import seekrkanban from "../images/seekr-kanban.PNG"
+import seekrmanager from "../images/seekr-manager.png"
+import seekrkanban from "../images/seekr-kanban.png"
+import seekrProject from "../images/seekr-project.png"
 
 const Seekr = () => {
   return (
@@ -81,6 +82,7 @@ const Seekr = () => {
         <img src={seekrmain} alt="DevPoint Seekr Main Page" />
         <img src={seekrkanban} alt="Seekr Kanban board" />
         <img src={seekrmanager} alt="Seekr job search manager" />
+        <img src={seekrProject} alt="Seekr Project page" />
         <iframe
           width="100%"
           height="400em"
