@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import styled from "styled-components"
 
 // Images
 import tyqcolor from "../images/tyqcolor.png"
