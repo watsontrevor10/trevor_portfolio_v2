@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 // Images and assets
 import seekr from "../images/seekr.png"
-import tyqcolor from "../images/tyqcolor.png"
+import tyqcolor from "../images/tyqcolor.PNG"
 import trevormain from "../images/trevor-main-page.png"
 
 const CodingPage = () => {
