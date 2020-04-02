@@ -12,8 +12,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Container>
-        <StyledLink to={"/coding"}>
+      <div class="main-container">
+        <Link class="styled-link" to={"/coding"}>
           <ImageContainer>
             <ImageOverlay>
               <CodingImage />
@@ -22,8 +22,8 @@ const IndexPage = () => {
               <h1>Coding</h1>
             </TextOverlay>
           </ImageContainer>
-        </StyledLink>
-        <StyledLink to={"/photography"}>
+        </Link>
+        <Link class="styled-link" to={"/photography"}>
           <ImageContainer>
             <ImageOverlay>
               <PhotoImage />
@@ -32,8 +32,8 @@ const IndexPage = () => {
               <h1>Photography</h1>
             </TextOverlay>
           </ImageContainer>
-        </StyledLink>
-        <StyledLink to={"/writing"}>
+        </Link>
+        <Link class="styled-link" to={"/writing"}>
           <ImageContainer>
             <ImageOverlay>
               <WritingImage />
@@ -42,8 +42,8 @@ const IndexPage = () => {
               <h1>Writing</h1>
             </TextOverlay>
           </ImageContainer>
-        </StyledLink>
-        <StyledLink to={"/music"}>
+        </Link>
+        <Link class="styled-link" to={"/music"}>
           <ImageContainer>
             <ImageOverlay>
               <MusicImage />
@@ -52,8 +52,8 @@ const IndexPage = () => {
               <h1>Music</h1>
             </TextOverlay>
           </ImageContainer>
-        </StyledLink>
-      </Container>
+        </Link>
+      </div>
     </Layout>
   )
 }
@@ -73,11 +73,6 @@ const TextOverlay = styled.div`
   transition: 0.5s linear;
 `
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
-`
-
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -91,14 +86,6 @@ const ImageContainer = styled.div`
   &:hover ${TextOverlay} {
     opacity: 1;
   }
-`
-
-const Container = styled.div`
-  display: grid;
-  width: 100% !important;
-  box-shadow: 1px 3px 3px black;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 `
 
 export default IndexPage
