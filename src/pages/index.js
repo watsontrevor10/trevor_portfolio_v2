@@ -63,20 +63,19 @@ const IndexPage = () => {
   )
 }
 
-// const ImageOverlay = styled.div`
-//   width: 100%;
-//   height: auto;
-//   opacity: 1;
-//   transition: 0.5s linear;
-// `
+const ImageOverlay = styled.div`
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: 0.5s linear;
+`
 
-// const TextOverlay = styled.div`
-//   position: absolute;
-//   max-width: 350px;
-//   text-align: center;
-//   opacity: 0;
-//   transition: 0.5s linear;
-// `
+const TextOverlay = styled.div`
+  position: absolute;
+  max-width: 350px;
+  opacity: 0;
+  transition: 0.5s linear;
+`
 
 const ImageContainer = styled.div`
   display: flex;
