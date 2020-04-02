@@ -96,8 +96,8 @@ const StyledLink = styled(Link)`
 
 const ImageOverlay = styled.div`
   position: relative;
-  max-width: 500px;
-  max-height: 360px;
+  max-width: 400px;
+  max-height: 290px;
   overflow: hidden;
   transition: 0.8s;
   opacity: 0.9;
@@ -136,8 +136,8 @@ const ProjectContainer = styled.div`
 const Container = styled.div`
   display: flex;
   flex-flow: wrap;
-  column-gap: 1em;
-  row-gap: 1em;
+  column-gap: 0;
+  row-gap: 0;
   flex-direction: row;
   justify-content: center;
 `
