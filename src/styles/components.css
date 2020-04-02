@@ -44,3 +44,18 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
+.txt-overlay {
+  position: absolute;
+  max-width: 350px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.img-overlay {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: 0.5s linear;
+}

@@ -96,8 +96,8 @@ const StyledLink = styled(Link)`
 
 const ImageOverlay = styled.div`
   position: relative;
-  max-width: 550px;
-  max-height: 400px;
+  max-width: 450px;
+  max-height: 325px;
   overflow: hidden;
   transition: 0.8s;
   opacity: 0.9;

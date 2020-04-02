@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import ImgOverlay from '../styles/ImgOverlay'
+import TxtOverlay from '../styles/TxtOverlay'
 import Layout from "../components/layout"
 import CodingImage from "../components/codingImage"
 import PhotoImage from "../components/photoImage"
@@ -15,42 +17,42 @@ const IndexPage = () => {
       <div class="main-container">
         <Link class="styled-link" to={"/coding"}>
           <ImageContainer>
-            <ImageOverlay>
+            <ImgOverlay>
               <CodingImage />
-            </ImageOverlay>
-            <TextOverlay>
+            </ImgOverlay>
+            <TxtOverlay>
               <h1>Coding</h1>
-            </TextOverlay>
+            </TxtOverlay>
           </ImageContainer>
         </Link>
         <Link class="styled-link" to={"/photography"}>
           <ImageContainer>
-            <ImageOverlay>
+            <ImgOverlay>
               <PhotoImage />
-            </ImageOverlay>
-            <TextOverlay>
+            </ImgOverlay>
+            <TxtOverlay>
               <h1>Photography</h1>
-            </TextOverlay>
+            </TxtOverlay>
           </ImageContainer>
         </Link>
         <Link class="styled-link" to={"/writing"}>
           <ImageContainer>
-            <ImageOverlay>
+            <ImgOverlay>
               <WritingImage />
-            </ImageOverlay>
-            <TextOverlay>
+            </ImgOverlay>
+            <TxtOverlay>
               <h1>Writing</h1>
-            </TextOverlay>
+            </TxtOverlay>
           </ImageContainer>
         </Link>
         <Link class="styled-link" to={"/music"}>
           <ImageContainer>
-            <ImageOverlay>
+            <ImgOverlay>
               <MusicImage />
-            </ImageOverlay>
-            <TextOverlay>
+            </ImgOverlay>
+            <TxtOverlay>
               <h1>Music</h1>
-            </TextOverlay>
+            </TxtOverlay>
           </ImageContainer>
         </Link>
       </div>
@@ -58,20 +60,20 @@ const IndexPage = () => {
   )
 }
 
-const ImageOverlay = styled.div`
-  width: 100%;
-  height: auto;
-  opacity: 1;
-  transition: 0.5s linear;
-`
+// const ImageOverlay = styled.div`
+//   width: 100%;
+//   height: auto;
+//   opacity: 1;
+//   transition: 0.5s linear;
+// `
 
-const TextOverlay = styled.div`
-  position: absolute;
-  max-width: 350px;
-  text-align: center;
-  opacity: 0;
-  transition: 0.5s linear;
-`
+// const TextOverlay = styled.div`
+//   position: absolute;
+//   max-width: 350px;
+//   text-align: center;
+//   opacity: 0;
+//   transition: 0.5s linear;
+// `
 
 const ImageContainer = styled.div`
   display: flex;
@@ -79,11 +81,11 @@ const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  &:hover ${ImageOverlay} {
+  &:hover ${ImgOverlay} {
     opacity: 0.1;
   }
 
-  &:hover ${TextOverlay} {
+  &:hover ${TxtOverlay} {
     opacity: 1;
   }
 `
