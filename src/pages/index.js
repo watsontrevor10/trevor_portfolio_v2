@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 // Styles
 import styled from "styled-components"
-import ImgCont from "../styles/ImageCont"
 import ImgOverlay from "../styles/ImgOverlay"
 import TxtOverlay from "../styles/TxtOverlay"
 import Layout from "../components/layout"
@@ -62,20 +61,6 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-const ImageOverlay = styled.div`
-  width: 100%;
-  height: auto;
-  opacity: 1;
-  transition: 0.5s linear;
-`
-
-const TextOverlay = styled.div`
-  position: absolute;
-  max-width: 350px;
-  opacity: 0;
-  transition: 0.5s linear;
-`
 
 const ImageContainer = styled.div`
   display: flex;

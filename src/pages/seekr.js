@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
-import styled from "styled-components"
 
 // Images
 import seekrmain from "../images/seekr.png"
@@ -82,6 +81,7 @@ const Seekr = () => {
         <img src={seekrkanban} alt="Seekr Kanban board" />
         <img src={seekrmanager} alt="Seekr job search manager" />
         <iframe
+          title="Seekr Demo"
           width="100%"
           height="400em"
           src="https://www.youtube.com/embed/Dps7caZ1CaQ"

@@ -39,7 +39,6 @@
 
 .main-container {
   display: grid;
-  /* width: 100% !important; */
   box-shadow: 1px 3px 3px black;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
