@@ -2,9 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 // Styles
-import styled from "styled-components"
-import ImgOverlay from "../styles/ImgOverlay"
-import TxtOverlay from "../styles/TxtOverlay"
+import { TxtOverlay, ImgOverlay, ImgCont } from "../styles/ImgOverlay"
 import Layout from "../components/layout"
 // Images
 import CodingImage from "../components/codingImage"
@@ -18,63 +16,48 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div class="main-container">
         <Link class="styled-link" to={"/coding"}>
-          <ImageContainer>
+          <ImgCont>
             <ImgOverlay>
               <CodingImage />
             </ImgOverlay>
             <TxtOverlay>
               <h1>Coding</h1>
             </TxtOverlay>
-          </ImageContainer>
+          </ImgCont>
         </Link>
         <Link class="styled-link" to={"/photography"}>
-          <ImageContainer>
+          <ImgCont>
             <ImgOverlay>
               <PhotoImage />
             </ImgOverlay>
             <TxtOverlay>
               <h1>Photography</h1>
             </TxtOverlay>
-          </ImageContainer>
+          </ImgCont>
         </Link>
         <Link class="styled-link" to={"/writing"}>
-          <ImageContainer>
+          <ImgCont>
             <ImgOverlay>
               <WritingImage />
             </ImgOverlay>
             <TxtOverlay>
               <h1>Writing</h1>
             </TxtOverlay>
-          </ImageContainer>
+          </ImgCont>
         </Link>
         <Link class="styled-link" to={"/music"}>
-          <ImageContainer>
+          <ImgCont>
             <ImgOverlay>
               <MusicImage />
             </ImgOverlay>
             <TxtOverlay>
               <h1>Music</h1>
             </TxtOverlay>
-          </ImageContainer>
+          </ImgCont>
         </Link>
       </div>
     </Layout>
   )
 }
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  &:hover ${ImgOverlay} {
-    opacity: 0.1;
-  }
-
-  &:hover ${TxtOverlay} {
-    opacity: 1;
-  }
-`
 
 export default IndexPage

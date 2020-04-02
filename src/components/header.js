@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => {
     <div>
       <header
         style={{
-          background: `#151616`,
+          background: `#262626`,
           marginBottom: `1.45rem`,
         }}
       >
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
         </div>
         <div
           style={{
-            marginLeft: '6rem',
+            marginLeft: "6rem",
             maxWidth: 300,
             padding: `1rem 0`,
           }}
