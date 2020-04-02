@@ -1,14 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
+import SEO from "../components/seo"
+// Styles
 import styled from "styled-components"
-import ImgOverlay from '../styles/ImgOverlay'
-import TxtOverlay from '../styles/TxtOverlay'
+import ImgCont from "../styles/ImageCont"
+import ImgOverlay from "../styles/ImgOverlay"
+import TxtOverlay from "../styles/TxtOverlay"
 import Layout from "../components/layout"
+// Images
 import CodingImage from "../components/codingImage"
 import PhotoImage from "../components/photoImage"
 import MusicImage from "../components/musicImage"
 import WritingImage from "../components/writingImage"
-import SEO from "../components/seo"
 
 const IndexPage = () => {
   return (
@@ -77,7 +80,7 @@ const IndexPage = () => {
 
 const ImageContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
