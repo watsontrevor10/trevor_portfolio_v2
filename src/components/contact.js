@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Contact = () => {
   return (
-    <form name="contact" method="post" data-netlify-honeypot="bot-field">
+    <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
       <ContactContainer>
         <h2>Contact Me</h2>
         <input type="hidden" name="form-name" value="contact" />
