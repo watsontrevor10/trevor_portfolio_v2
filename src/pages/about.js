@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
@@ -48,7 +49,7 @@ const About = () => {
             href="https://www.linkedin.com/in/trevorjwatson/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
+            class="styled-link"
           >
             <div class="main-btn">LinkedIn</div>
           </a>
@@ -56,10 +57,13 @@ const About = () => {
             href="https://github.com/watsontrevor10"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
+            class="styled-link"
           >
             <div class="main-btn">GitHub</div>
           </a>
+          <Link to='/coding' class="styled-link">
+            <div class="main-btn">Projects</div>
+          </Link>
         </LinkContainer>
         <div style={{}}>
           <Contact />

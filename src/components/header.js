@@ -16,13 +16,13 @@ const Header = ({ siteTitle }) => {
       <header
         style={{
           background: `#262626`,
-          marginBottom: `1.45rem`,
+          marginBottom: `.5rem`,
         }}
       >
         <div
           style={{
             position: "absolute",
-            top: "1.8em",
+            top: "2.5em",
             left: "3em",
             cursor: "pointer",
           }}
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
             padding: `1rem 0`,
           }}
         >
-          <h1 style={{ margin: 0, textAlign: "left" }}>
+          <h1 style={{ margin: ".3em 0 0 0", textAlign: "left" }}>
             <Link
               to="/"
               style={{

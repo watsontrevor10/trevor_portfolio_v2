@@ -1,8 +1,22 @@
+.center {
+  max-width: 960;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  padding: .5em;
+  column-gap: 1em;
+}
+
 .main-btn {
   border: 1px solid;
   width: 8rem;
   text-align: center;
-  margin: auto;
+  margin: 1em auto;
 }
 
 .img-container {
