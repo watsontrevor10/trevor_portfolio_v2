@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `Trevor Watson`,
@@ -35,6 +36,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        type: `upload`,
+        prefix: `portfolio/`,
+        tags: true,
+      }
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "chivsjawn.wordpress.com",
@@ -70,7 +83,7 @@ module.exports = {
         ],
         keepMediaSizes: false,
         excludedRoutes: [],
-        normalizer: function({ entities }) {
+        normalizer: function ({ entities }) {
           return entities
         },
       },
