@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const Cloudinary = () => {
   const data = useStaticQuery(graphql`
