@@ -1,11 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import Photos from '../components/instagramPhotos'
-import SEO from '../components/seo'
+import Photos from "../components/instagramPhotos"
+import SEO from "../components/seo"
 import Cloudinary from "../components/cloudinary"
 
 const PhotoPage = ({ data }) => {
-
   return (
     <Layout>
       <SEO title="Photography" />
@@ -14,7 +13,9 @@ const PhotoPage = ({ data }) => {
           <h2 class="callout-txt">Photography</h2>
         </div>
         <Cloudinary />
-        <h1>Instagram</h1>
+        <div class="callout">
+          <h2 class="callout-txt">Instagram</h2>
+        </div>
         <Photos />
       </div>
     </Layout>
