@@ -29,7 +29,7 @@ const About = () => {
         </div>
         <div style={{ padding: "0 1em 1em .5em" }}>
           <p>
-            I am a professional musician and web developer, budding
+            I am a professional musician and freelance web developer, budding
             photographer, wannabe writer/author, avid learner, and most
             importantly husband and father.
           </p>
@@ -42,6 +42,10 @@ const About = () => {
             has led me to web development. I was looking for something that
             would allow me to continue to learn and grow, gain new skills and
             have the potential build amazing things.
+          </p>
+          <p>
+            I am available for hire for a variety of web development needs, drop
+            me a line for more details.
           </p>
         </div>
         <LinkContainer>
@@ -61,8 +65,11 @@ const About = () => {
           >
             <div class="main-btn">GitHub</div>
           </a>
-          <Link to='/coding' class="styled-link">
+          <Link to="/coding" class="styled-link">
             <div class="main-btn">Projects</div>
+          </Link>
+          <Link to="/myGear" class="styled-link">
+            <div class="main-btn">My Gear</div>
           </Link>
         </LinkContainer>
         <div style={{}}>
@@ -78,7 +85,7 @@ const LinkContainer = styled.div`
   flex-direction: row;
   column-gap: 1em;
   justify-content: center;
-  padding: .25rem;
+  padding: 0.25rem;
 `
 
 export default About

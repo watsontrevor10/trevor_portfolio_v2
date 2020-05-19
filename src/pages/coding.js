@@ -28,7 +28,7 @@ const CodingPage = () => {
                 our "capstone" project while studying full-stack web development
                 at Devpoint Labs
               </P>
-              <Tools>#RubyonRails, #React, #SCSS, #ReCharts, #PostgreSQL</Tools>
+              <Tools>#RubyonRails, #Reactjs, #SCSS, #ReCharts, #PostgreSQL</Tools>
             </StyledLink>
           </TextOverlay>
         </ProjectContainer>
@@ -45,7 +45,7 @@ const CodingPage = () => {
                 all of his coloring books in one place and market to more
                 people.
               </P>
-              <Tools>#Gatsby, #React, #StyledComponents</Tools>
+              <Tools>#Gatsbyjs, #Reactjs, #StyledComponents</Tools>
             </StyledLink>
           </TextOverlay>
         </ProjectContainer>
@@ -57,15 +57,13 @@ const CodingPage = () => {
             <StyledLink to={"/trevor"}>
               <h3>Trevor Watson</h3>
               <P>
-                For version 2 of my portfolio website I wanted to portray myself
-                as more than just a web developer. We are all more than just our
-                jobs, and I hope that this site helps you see the many things
-                that I do that make up who I am and influence my design and
-                coding decisions.
+                This site is a representation of me as a person, not just a web
+                developer. We are more than our jobs, and I hope this site will
+                continue to show many facets of my life.
               </P>
               <Tools>
-                #Gatsby, #React, #StyledComponents, #GraphQL, #InstagramAPI,
-                #WordpressAPI, #HeadlessBlog
+                #Gatsbyjs, #Reactjs, #StyledComponents, #GraphQL, #InstagramAPI,
+                #WordpressAPI, #HeadlessBlog, #CloudinaryAPI
               </Tools>
             </StyledLink>
           </TextOverlay>

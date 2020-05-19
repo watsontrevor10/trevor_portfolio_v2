@@ -56,17 +56,21 @@ const MusicPage = () => {
             <div>
               <p>
                 Three Sharp is a jazz trio located in beautiful Utah Valley.
-                Since 2015, the trio has been active around the state of Utah
+                Since 2015 the trio has been active around the state of Utah;
                 performing for weddings, private parties, and corporate events.
                 Playing mostly reimagined jazz standards and familiar tunes, the
                 trio creates a classy atmosphere for any occasion.
               </p>
               <p>
                 Three Sharp was formed as pianist Ammon Doman, drummer Matt
-                Tippetts reunited after many years. We had each performed with
-                one another in college, but never in the same group. We decided
-                to jam one day long after we had all graduated, and we have been
-                a group ever since.
+                Tippetts and myself reunited years after graudating from Brigham
+                Young University. I had been in groups with both of them, but we
+                had never been in the same group at the same time.
+              </p>
+              <p>
+                After going our separate ways and pursuing our careers, we
+                finally decided to jam in 2015, and we've been jamming ever
+                since.
               </p>
             </div>
             <a
@@ -104,7 +108,8 @@ const MusicPage = () => {
                 for the jazz combo Sensational Seven, and bassist and
                 percussionist for the concert band. I also perform other duties
                 such as social media promotion, mentoring fellow soldiers,
-                logistics, and event coordination.
+                logistics, event coordination, and am even an Army certified bus
+                driver for the unit.
               </p>
             </div>
             <a
