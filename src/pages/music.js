@@ -22,18 +22,18 @@ const MusicPage = () => {
           <IframeContainer>
             <iframe
               title="CoronaCollab #1"
-              width="50%"
-              height="100%"
+              width="450px"
+              height="300px"
               src="https://www.youtube.com/embed/QiufgqQ9mCQ"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
             <iframe
-              title="Recorda-me"
-              width="50%"
-              height="100%"
-              src="https://www.youtube.com/embed/oZHTrLui76c"
+              title="Runaway"
+              width="450px"
+              height="300px"
+              src="https://www.youtube.com/embed/vNtQzARAjhs"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -137,9 +137,10 @@ const ImageContainer = styled.div`
 
 const IframeContainer = styled.div`
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   column-gap: 1rem;
-  height: 20em;
-  width: auto;
+  max-width: 1000px;
   padding: 2rem 1rem 2.5rem 1rem;
 `
 
