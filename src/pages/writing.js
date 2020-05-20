@@ -2,40 +2,45 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 const Writing = ({ data }) => {
   return (
     <Layout>
       <SEO title="Writing" />
       <div class="center">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "4rem",
-          }}
-        >
+        <BlogCont>
           {/* Blog Posts */}
           {data.allWordpressPost.edges.map(post => (
-            <Link
-              to={"/post/" + post.node.slug}
-              key={post.node.id}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div style={{ maxWidth: "500px", padding: `0 .5rem 1rem .5rem` }}>
+            <Blog>
+              <Link
+                to={"/post/" + post.node.slug}
+                key={post.node.id}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
                 <p>{post.node.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            </Link>
+              </Link>
+            </Blog>
           ))}
-        </div>
+        </BlogCont>
       </div>
     </Layout>
   )
 }
+
+const BlogCont = styled.div`
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-flow: row wrap;
+`
+
+const Blog = styled.div`
+  max-width: 475px;
+  padding: 1em;
+`
 
 export const query = graphql`
   query {
