@@ -50,7 +50,7 @@ const MyStuff = () => {
               </li>
               <li>MXL Condensor Microphones</li>
               <li>JBL Studio Monitors</li>
-              <li>Akai Midi Controller</li>
+              <li>Akai LPK-25 Midi Controller</li>
               <li>Ibanez Roadstar II (1981)</li>
               <li>Ibanez Talman Short Scale Bass</li>
               <li>Gallien-Krueger MB112</li>
