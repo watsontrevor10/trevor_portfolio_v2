@@ -99,7 +99,7 @@ const MusicPage = () => {
             <div>
               <p>
                 I have been performing professionally for the 23rd Army Band for
-                over 10 years. I am currently the Principle Bassist performing
+                over 10 years. I am currently the Principal Bassist performing
                 in multiple genres and groups.
               </p>
               <p>
