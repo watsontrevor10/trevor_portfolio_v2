@@ -10,6 +10,7 @@ const BlogPost = ({ data }) => (
       title={data.contentfulBlogPost.title}
       description={data.contentfulBlogPost.description.description}
     />
+    {console.log(data)}
     <MainContainer>
       <div style={{ paddingBottom: "1em", float: "right" }}>
         <Link to="/writing">Back</Link>
@@ -20,7 +21,10 @@ const BlogPost = ({ data }) => (
         />
       </div>
       <Image>
-        <img src={data.contentfulBlogPost.heroImage.fluid.src} />
+        <img
+          src={data.contentfulBlogPost.heroImage.fluid.src}
+          alt={data.contentfulBlogPost.heroImage.description}
+        />
       </Image>
       <div>
         <p>{data.contentfulBlogPost.publishDate}</p>
@@ -72,6 +76,7 @@ export const query = graphql`
       }
       contentful_id
       heroImage {
+        description
         fluid {
           src
         }

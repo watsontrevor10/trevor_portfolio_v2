@@ -45,6 +45,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: BlogPost,
       context: {
         id: post.node.contentful_id,
+        slug: post.node.slug,
       },
     })
   })
