@@ -34,14 +34,14 @@ const BlogPost = ({ data }) => (
           }}
         ></div>
       </div>
-      {/* <div
+      <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexFlow: "wrap",
         }}
       >
-        {data.contentfulBlogPost.categories.map(cat => (
+        {data.contentfulBlogPost.tags.map(cat => (
           <span
             style={{
               margin: ".3rem .5rem",
@@ -49,10 +49,10 @@ const BlogPost = ({ data }) => (
               fontSize: "14px",
             }}
           >
-            #{cat.name}
+            #{cat}
           </span>
         ))}
-      </div> */}
+      </div>
       <div style={{ float: "right" }}>
         <Link to="/writing">Back</Link>
       </div>
@@ -65,6 +65,7 @@ export const query = graphql`
     contentfulBlogPost(contentful_id: { eq: $id }) {
       title
       slug
+      tags
       publishDate(formatString: "MMMM DD, YYYY")
       body {
         childMarkdownRemark {
