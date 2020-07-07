@@ -4,50 +4,53 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Instagram = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allInstaNode(sort: { fields: likes, order: DESC }, limit: 12) {
-          edges {
-            node {
-              id
-              caption
-              localFile {
-                childImageSharp {
-                  fluid(quality: 100) {
-                    ...GatsbyImageSharpFluid
-                    originalImg
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <MainContainer>
-        {data.allInstaNode.edges.map((item, i) =>
-          item.node.localFile ? (
-            <a
-              href="https://www.instagram.com/chivsjawnphoto/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ImageContainer key={i}>
-                <Image
-                  fluid={item.node.localFile.childImageSharp.fluid}
-                  alt={item.node.caption}
-                />
-              </ImageContainer>
-            </a>
-          ) : (
-            <div></div>
-          )
-        )}
-      </MainContainer>
-    )}
-  />
+  <>
+    <h1>Deprecated</h1>
+  </>
+  // <StaticQuery
+  //   query={graphql`
+  //     query {
+  //       allInstaNode(sort: { fields: likes, order: DESC }, limit: 12) {
+  //         edges {
+  //           node {
+  //             id
+  //             caption
+  //             localFile {
+  //               childImageSharp {
+  //                 fluid(quality: 100) {
+  //                   ...GatsbyImageSharpFluid
+  //                   originalImg
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `}
+  //   render={data => (
+  //     <MainContainer>
+  //       {data.allInstaNode.edges.map((item, i) =>
+  //         item.node.localFile ? (
+  //           <a
+  //             href="https://www.instagram.com/chivsjawnphoto/"
+  //             target="_blank"
+  //             rel="noopener noreferrer"
+  //           >
+  //             <ImageContainer key={i}>
+  //               <Image
+  //                 fluid={item.node.localFile.childImageSharp.fluid}
+  //                 alt={item.node.caption}
+  //               />
+  //             </ImageContainer>
+  //           </a>
+  //         ) : (
+  //           <div></div>
+  //         )
+  //       )}
+  //     </MainContainer>
+  //   )}
+  // />
 )
 
 const MainContainer = styled.div`
