@@ -7,26 +7,37 @@ import SEO from "../components/seo"
 const BlogPost = ({ data }) => (
   <Layout>
     <SEO
-      title={data.wordpressPost.title}
-      description={data.wordpressPost.excerpt}
+      title={data.contentfulBlogPost.title}
+      description={data.contentfulBlogPost.description.description}
     />
     <MainContainer>
       <div style={{ paddingBottom: "1em", float: "right" }}>
         <Link to="/writing">Back</Link>
       </div>
       <div>
-        <h1 dangerouslySetInnerHTML={{ __html: data.wordpressPost.title }} />
-        <p>{data.wordpressPost.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
+        <h1
+          dangerouslySetInnerHTML={{ __html: data.contentfulBlogPost.title }}
+        />
       </div>
-      <div
+      <Image>
+        <img src={data.contentfulBlogPost.heroImage.fluid.src} />
+      </Image>
+      <div>
+        <p>{data.contentfulBlogPost.publishDate}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.contentfulBlogPost.body.childMarkdownRemark.html,
+          }}
+        ></div>
+      </div>
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexFlow: "wrap",
         }}
       >
-        {data.wordpressPost.categories.map(cat => (
+        {data.contentfulBlogPost.categories.map(cat => (
           <span
             style={{
               margin: ".3rem .5rem",
@@ -37,7 +48,7 @@ const BlogPost = ({ data }) => (
             #{cat.name}
           </span>
         ))}
-      </div>
+      </div> */}
       <div style={{ float: "right" }}>
         <Link to="/writing">Back</Link>
       </div>
@@ -46,17 +57,24 @@ const BlogPost = ({ data }) => (
 )
 
 export const query = graphql`
-  query($id: Int!) {
-    wordpressPost(wordpress_id: { eq: $id }) {
-      author
-      date(formatString: "MMMM DD, YYYY")
-      content
+  query {
+    contentfulBlogPost {
       title
-      tags {
-        name
+      slug
+      publishDate(formatString: "MMMM DD, YYYY")
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
-      categories {
-        name
+      description {
+        description
+      }
+      id
+      heroImage {
+        fluid {
+          src
+        }
       }
     }
   }
@@ -64,6 +82,12 @@ export const query = graphql`
 
 const MainContainer = styled.div`
   margin: 5rem;
+`
+
+const Image = styled.div`
+  width: 70%;
+  margin: auto;
+  align-content: center;
 `
 
 export default BlogPost
