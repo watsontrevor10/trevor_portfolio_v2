@@ -11,16 +11,23 @@ const Writing = ({ data }) => {
       <div class="center">
         <BlogCont>
           {/* Blog Posts */}
-          {data.allWordpressPost.edges.map(post => (
+          {data.allContentfulBlogPost.edges.map(post => (
             <Blog>
               <Link
                 to={"/post/" + post.node.slug}
-                key={post.node.id}
+                key={post.node.contentful_id}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
-                <p>{post.node.date}</p>
-                <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                <ImgCont>
+                  <img src={post.node.heroImage.fluid.src} alt={post.node.heroImage.description} />
+                </ImgCont>
+                <p>{post.node.publishDate}</p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: post.node.description.description,
+                  }}
+                />
               </Link>
             </Blog>
           ))}
@@ -42,17 +49,30 @@ const Blog = styled.div`
   padding: 1em;
 `
 
+const ImgCont = styled.div`
+  width: 90%;
+  margin: auto;
+  align-content: center;
+`
+
 export const query = graphql`
   query {
-    allWordpressPost(limit: 12) {
+    allContentfulBlogPost {
       edges {
         node {
-          id
-          slug
+          contentful_id
           title
-          date(formatString: "MMMM DD, YYYY")
-          excerpt
-          content
+          slug
+          publishDate(formatString: "MMMM DD, YYYY")
+          description {
+            description
+          }
+          heroImage {
+            description
+            fluid(maxHeight: 275) {
+              src
+            }
+          }
         }
       }
     }
