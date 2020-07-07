@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Trevor Watson`,
@@ -17,6 +18,21 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -45,47 +61,14 @@ module.exports = {
         type: `upload`,
         prefix: `portfolio/`,
         tags: true,
-      }
+      },
     },
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: `gatsby-source-contentful`,
       options: {
-        baseUrl: "chivsjawn.wordpress.com",
-        protocol: "https",
-        restApiRoutePrefix: "wp-json",
-        hostingWPCOM: true,
-        useACF: false,
-        acfOptionPageIds: [],
-        verboseOutput: false,
-        perPage: 20,
-        verboseOutput: false,
-        auth: {
-          wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-          wpcom_app_clientId: "68400",
-          wpcom_user: "watsontrevor10@gmail.com",
-          wpcom_pass: process.env.WORDPRESS_PASSWORD,
-        },
-        searchAndReplaceContentUrls: {
-          sourceUrl: "https://chivsjawn.wordpress.com",
-          replacementUrl: "https://localhost:8000",
-        },
-
-        // Set how many simultaneous requests are sent at once.
-        concurrentRequests: 10,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          // "**/media",
-          "**/tags",
-          "**/taxonomies",
-          // "**/users",
-        ],
-        keepMediaSizes: false,
-        excludedRoutes: [],
-        normalizer: function ({ entities }) {
-          return entities
-        },
+        spaceId: `hgq36k8st2a3`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

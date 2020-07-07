@@ -109,10 +109,6 @@ const TrevorWatson = () => {
   )
 }
 
-const Button = styled.div`
-  border: 1px solid;
-`
-
 const Img = styled.img`
   box-shadow: 1px 2px 2px black;
 `

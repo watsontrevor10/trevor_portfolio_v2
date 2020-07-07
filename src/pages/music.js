@@ -22,18 +22,18 @@ const MusicPage = () => {
           <IframeContainer>
             <iframe
               title="CoronaCollab #1"
-              width="50%"
-              height="100%"
+              width="450px"
+              height="300px"
               src="https://www.youtube.com/embed/QiufgqQ9mCQ"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
             <iframe
-              title="Recorda-me"
-              width="50%"
-              height="100%"
-              src="https://www.youtube.com/embed/oZHTrLui76c"
+              title="Runaway"
+              width="450px"
+              height="300px"
+              src="https://www.youtube.com/embed/vNtQzARAjhs"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -56,17 +56,21 @@ const MusicPage = () => {
             <div>
               <p>
                 Three Sharp is a jazz trio located in beautiful Utah Valley.
-                Since 2015, the trio has been active around the state of Utah
+                Since 2015 the trio has been active around the state of Utah;
                 performing for weddings, private parties, and corporate events.
                 Playing mostly reimagined jazz standards and familiar tunes, the
                 trio creates a classy atmosphere for any occasion.
               </p>
               <p>
                 Three Sharp was formed as pianist Ammon Doman, drummer Matt
-                Tippetts reunited after many years. We had each performed with
-                one another in college, but never in the same group. We decided
-                to jam one day long after we had all graduated, and we have been
-                a group ever since.
+                Tippetts and myself reunited years after graudating from Brigham
+                Young University. I had been in groups with both of them, but we
+                had never been in the same group at the same time.
+              </p>
+              <p>
+                After going our separate ways and pursuing our careers, we
+                finally decided to jam in 2015, and we've been jamming ever
+                since.
               </p>
             </div>
             <a
@@ -95,7 +99,7 @@ const MusicPage = () => {
             <div>
               <p>
                 I have been performing professionally for the 23rd Army Band for
-                over 10 years. I am currently the Principle Bassist performing
+                over 10 years. I am currently the Principal Bassist performing
                 in multiple genres and groups.
               </p>
               <p>
@@ -104,7 +108,8 @@ const MusicPage = () => {
                 for the jazz combo Sensational Seven, and bassist and
                 percussionist for the concert band. I also perform other duties
                 such as social media promotion, mentoring fellow soldiers,
-                logistics, and event coordination.
+                logistics, event coordination, and am even an Army certified bus
+                driver for the unit.
               </p>
             </div>
             <a
@@ -132,9 +137,10 @@ const ImageContainer = styled.div`
 
 const IframeContainer = styled.div`
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   column-gap: 1rem;
-  height: 20em;
-  width: auto;
+  max-width: 1000px;
   padding: 2rem 1rem 2.5rem 1rem;
 `
 

@@ -2,52 +2,77 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
 
 const Writing = ({ data }) => {
   return (
     <Layout>
       <SEO title="Writing" />
       <div class="center">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "4rem",
-          }}
-        >
+        <BlogCont>
           {/* Blog Posts */}
-          {data.allWordpressPost.edges.map(post => (
-            <Link
-              to={"/post/" + post.node.slug}
-              key={post.node.id}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div style={{ maxWidth: "500px", padding: `0 .5rem 1rem .5rem` }}>
+          {data.allContentfulBlogPost.edges.map(post => (
+            <Blog>
+              <Link
+                to={"/post/" + post.node.slug}
+                key={post.node.contentful_id}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
-                <p>{post.node.date}</p>
-                <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            </Link>
+                <ImgCont>
+                  <img src={post.node.heroImage.fluid.src} alt={post.node.heroImage.description} />
+                </ImgCont>
+                <p>{post.node.publishDate}</p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: post.node.description.description,
+                  }}
+                />
+              </Link>
+            </Blog>
           ))}
-        </div>
+        </BlogCont>
       </div>
     </Layout>
   )
 }
 
+const BlogCont = styled.div`
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-flow: row wrap;
+`
+
+const Blog = styled.div`
+  max-width: 475px;
+  padding: 1em;
+`
+
+const ImgCont = styled.div`
+  width: 90%;
+  margin: auto;
+  align-content: center;
+`
+
 export const query = graphql`
   query {
-    allWordpressPost(limit: 12) {
+    allContentfulBlogPost {
       edges {
         node {
-          id
-          slug
+          contentful_id
           title
-          date(formatString: "MMMM DD, YYYY")
-          excerpt
-          content
+          slug
+          publishDate(formatString: "MMMM DD, YYYY")
+          description {
+            description
+          }
+          heroImage {
+            description
+            fluid(maxHeight: 275) {
+              src
+            }
+          }
         }
       }
     }

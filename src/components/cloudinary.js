@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
 const Cloudinary = () => {
   const data = useStaticQuery(graphql`
@@ -21,29 +20,33 @@ const Cloudinary = () => {
 
   return (
     <MainContainer>
-      <ImageContainer>
-        {clImages.map((image, index) => (
-          <Image src={image.node.secure_url} key={index} />
-        ))}
-      </ImageContainer>
+      {clImages.map((image, index) => (
+        <ImageContainer key={index}>
+          <Image src={image.node.secure_url} />
+        </ImageContainer>
+      ))}
     </MainContainer>
   )
 }
 
 const MainContainer = styled.div`
   column-count: 2;
-  column-gap: 0px;
-  row-gap: 0px;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  grid-gap: 0;
   line-height: 0;
 `
 
 const ImageContainer = styled.div`
-  padding: 0px;
+  padding: 0;
+  margin: 0;
   break-inside: avoid-column;
+  height: auto !important;
 `
 
 const Image = styled.img`
   width: 100% !important;
+  height: auto !important;
 `
 
 export default Cloudinary

@@ -7,17 +7,32 @@ import SEO from "../components/seo"
 const BlogPost = ({ data }) => (
   <Layout>
     <SEO
-      title={data.wordpressPost.title}
-      description={data.wordpressPost.excerpt}
+      title={data.contentfulBlogPost.title}
+      description={data.contentfulBlogPost.description.description}
     />
+    {console.log(data)}
     <MainContainer>
       <div style={{ paddingBottom: "1em", float: "right" }}>
         <Link to="/writing">Back</Link>
       </div>
       <div>
-        <h1 dangerouslySetInnerHTML={{ __html: data.wordpressPost.title }} />
-        <p>{data.wordpressPost.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }} />
+        <h1
+          dangerouslySetInnerHTML={{ __html: data.contentfulBlogPost.title }}
+        />
+      </div>
+      <Image>
+        <img
+          src={data.contentfulBlogPost.heroImage.fluid.src}
+          alt={data.contentfulBlogPost.heroImage.description}
+        />
+      </Image>
+      <div>
+        <p>{data.contentfulBlogPost.publishDate}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.contentfulBlogPost.body.childMarkdownRemark.html,
+          }}
+        ></div>
       </div>
       <div
         style={{
@@ -26,7 +41,7 @@ const BlogPost = ({ data }) => (
           flexFlow: "wrap",
         }}
       >
-        {data.wordpressPost.categories.map(cat => (
+        {data.contentfulBlogPost.tags.map(cat => (
           <span
             style={{
               margin: ".3rem .5rem",
@@ -34,7 +49,7 @@ const BlogPost = ({ data }) => (
               fontSize: "14px",
             }}
           >
-            #{cat.name}
+            #{cat}
           </span>
         ))}
       </div>
@@ -46,17 +61,26 @@ const BlogPost = ({ data }) => (
 )
 
 export const query = graphql`
-  query($id: Int!) {
-    wordpressPost(wordpress_id: { eq: $id }) {
-      author
-      date(formatString: "MMMM DD, YYYY")
-      content
+  query($id: String!) {
+    contentfulBlogPost(contentful_id: { eq: $id }) {
       title
-      tags {
-        name
+      slug
+      tags
+      publishDate(formatString: "MMMM DD, YYYY")
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
-      categories {
-        name
+      description {
+        description
+      }
+      contentful_id
+      heroImage {
+        description
+        fluid {
+          src
+        }
       }
     }
   }
@@ -64,6 +88,12 @@ export const query = graphql`
 
 const MainContainer = styled.div`
   margin: 5rem;
+`
+
+const Image = styled.div`
+  width: 70%;
+  margin: auto;
+  align-content: center;
 `
 
 export default BlogPost
