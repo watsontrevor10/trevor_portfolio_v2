@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import seekr from "../images/seekr.png"
 import tyqcolor from "../images/tyqcolor.png"
 import trevormain from "../images/trevor-main-page.png"
+import rpsMain from "../images/rps-main.png"
 
 const CodingPage = () => {
   return (
@@ -15,6 +16,7 @@ const CodingPage = () => {
         <h2 class="callout-txt">Projects</h2>
       </div>
       <Container>
+        {/* DevPoint Seekr */}
         <ProjectContainer>
           <ImageOverlay>
             <Img src={seekr} alt="DevPoint Seekr" />
@@ -28,10 +30,14 @@ const CodingPage = () => {
                 our "capstone" project while studying full-stack web development
                 at Devpoint Labs
               </P>
-              <Tools>#RubyonRails, #Reactjs, #SCSS, #ReCharts, #PostgreSQL</Tools>
+              <Tools>
+                #RubyonRails, #Reactjs, #SCSS, #ReCharts, #PostgreSQL
+              </Tools>
             </StyledLink>
           </TextOverlay>
         </ProjectContainer>
+
+        {/* Ty Q. Color */}
         <ProjectContainer>
           <ImageOverlay>
             <Img src={tyqcolor} alt="Ty Q. Color" />
@@ -49,6 +55,29 @@ const CodingPage = () => {
             </StyledLink>
           </TextOverlay>
         </ProjectContainer>
+
+        {/* Rock-Paper-Scissors */}
+        <ProjectContainer>
+          <ImageOverlay>
+            <Img src={rpsMain} alt="Rock-Paper-Scissors Game" />
+          </ImageOverlay>
+          <TextOverlay>
+            <StyledLink to={"/rps"}>
+              <h3>Rock-Paper-Scissors Game</h3>
+              <P>
+                The classic Rock-Paper-Scissors game we all know and
+                love. I began building this at DevPoint Labs and
+                I finished it up recently for fun and to practice with
+                JavaScript.
+              </P>
+              <Tools>
+                #Reactjs, #Semantic-UI
+              </Tools>
+            </StyledLink>
+          </TextOverlay>
+        </ProjectContainer>
+        
+        {/* Trevor Watson Portfolio */}
         <ProjectContainer>
           <ImageOverlay>
             <Img src={trevormain} alt="Trevor Watson main page" />
@@ -68,6 +97,7 @@ const CodingPage = () => {
             </StyledLink>
           </TextOverlay>
         </ProjectContainer>
+
       </Container>
     </Layout>
   )
