@@ -38,6 +38,7 @@ const MyStuff = () => {
               <li>iTerm2</li>
               <li>Focus ToDo</li>
               <li>Firefox</li>
+              <li>Chrome</li>
             </ul>
           </List>
 
@@ -49,11 +50,14 @@ const MyStuff = () => {
                 Behringer U-Phoria Audio Interfaces (I have two different kinds)
               </li>
               <li>MXL Condensor Microphones</li>
-              <li>JBL Studio Monitors</li>
               <li>Akai LPK-25 Midi Controller</li>
               <li>Ibanez Roadstar II (1981)</li>
               <li>Ibanez Talman Short Scale Bass</li>
               <li>Gallien-Krueger MB112</li>
+              <li>Electro-Harmonix Big Bass Muff</li>
+              <li>Korg Pitch Black Tuner</li>
+              <li>Ditto Looper</li>
+              <li>MuseScore</li>
             </ul>
           </List>
           <List>
@@ -61,6 +65,10 @@ const MyStuff = () => {
             <ul>
               <li>Sony A7III</li>
               <li>Zeiss 55mm 1.8 lens</li>
+              <li>Takstar shotgun mic</li>
+              <li>Adobe Lightroom</li>
+              <li>Adobe Photoshop</li>
+              
             </ul>
           </List>
         </ListCont>
