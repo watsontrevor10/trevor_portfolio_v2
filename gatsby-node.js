@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     allContentfulBlogPost {
       edges {
         node {
-          id
+          contentful_id
           title
           slug
           publishDate(formatString: "MMMM DD, YYYY")
@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `/post/${post.node.slug}`,
       component: BlogPost,
       context: {
-        id: post.node.id,
+        id: post.node.contentful_id,
       },
     })
   })

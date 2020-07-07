@@ -70,7 +70,7 @@ export const query = graphql`
       description {
         description
       }
-      id
+      contentful_id
       heroImage {
         fluid {
           src

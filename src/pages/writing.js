@@ -15,7 +15,7 @@ const Writing = ({ data }) => {
             <Blog>
               <Link
                 to={"/post/" + post.node.slug}
-                key={post.node.id}
+                key={post.node.contentful_id}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
@@ -60,7 +60,7 @@ export const query = graphql`
     allContentfulBlogPost {
       edges {
         node {
-          id
+          contentful_id
           title
           slug
           publishDate(formatString: "MMMM DD, YYYY")
