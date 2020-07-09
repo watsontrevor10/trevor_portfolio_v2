@@ -39,7 +39,7 @@ const TyQ = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              #Gatsby
+              #Gatsbyjs
             </a>
             {", "}
             <a
@@ -47,7 +47,7 @@ const TyQ = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              #React
+              #Reactjs
             </a>
           </span>
         </div>
