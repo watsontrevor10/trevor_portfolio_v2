@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 
 // Images
 import rpsMain from "../images/rps-main.png"
+import rpsGif from "../images/Rockpaperscissors.gif"
 
 const Rps = () => {
   return (
@@ -50,9 +51,10 @@ const Rps = () => {
             </a>
           </span>
         </div>
+        
         {/* Link buttons */}
         <div class="flex-content">
-        <a
+          <a
             href="https://watson-rps-app.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,8 +74,11 @@ const Rps = () => {
             <div class="main-btn">Hire Me</div>
           </Link>
         </div>
+
+        {/* Image gallery */}
         <div class="img-container">
-          <img src={rpsMain} alt="DevPoint Seekr Main Page" />
+          <img src={rpsMain} alt="rock-paper-scissors main page" />
+          <img src={rpsGif} alt="rock-paper-scissors gif tour" />
         </div>
       </div>
     </Layout>
