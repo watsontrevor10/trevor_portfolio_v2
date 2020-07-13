@@ -20,7 +20,11 @@ const Writing = ({ data }) => {
               >
                 <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
                 <ImgCont>
-                  <img src={post.node.heroImage.fluid.src} alt={post.node.heroImage.description} />
+                  <img
+                    src={post.node.heroImage.fluid.src}
+                    alt={post.node.heroImage.description}
+                    style={{ width: "100%", maxHeight: "280px" }}
+                  />
                 </ImgCont>
                 <p>{post.node.publishDate}</p>
                 <div
@@ -50,8 +54,9 @@ const Blog = styled.div`
 `
 
 const ImgCont = styled.div`
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin-bottom: 0 !important;
+  /* margin: auto; */
   align-content: center;
 `
 
@@ -69,7 +74,7 @@ export const query = graphql`
           }
           heroImage {
             description
-            fluid(maxHeight: 275) {
+            fluid(cropFocus: CENTER) {
               src
             }
           }
