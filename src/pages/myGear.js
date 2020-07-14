@@ -65,10 +65,10 @@ const MyStuff = () => {
             <ul>
               <li>Sony A7III</li>
               <li>Zeiss 55mm 1.8 lens</li>
+              <li>Sony 24-70mm F3.5-5.6 kit lens</li>
               <li>Takstar shotgun mic</li>
               <li>Adobe Lightroom</li>
               <li>Adobe Photoshop</li>
-              
             </ul>
           </List>
         </ListCont>
