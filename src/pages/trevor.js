@@ -33,15 +33,22 @@ const TrevorWatson = () => {
         <div class="prj-text-cont">
           <p>
             This is version 2 of my portfolio page. I built this as a way to
-            show the diversity of interests I have through now only the design
+            show the diversity of interests I have through not only the design
             of the site but the content as well.
           </p>
           <p>
-            I wanted to expand my knowledge of GraphQL, custom CSS, and give my
-            portfolio a more polished and professional look. This site
+            I wanted to expand my knowledge of GraphQL, custom CSS, API's and
+            give my portfolio a more polished and professional look. This site
             represents not just my expanding knowledge of coding and design, but
             the variety of interests that I have, and gives me one place to
             showcase those interests.
+          </p>
+          <p>
+            Currently the project uses Contentful for the blog, Cloudinary for
+            the photo gallery. I'm using a mix of CSS and Styled Components for
+            styling. I plan on implementing a connection with YouTube to pull in
+            video playlists for both music and development projects I'm working
+            on.
           </p>
           <span>
             <a
@@ -49,7 +56,7 @@ const TrevorWatson = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              #Gatsby
+              #GatsbyJS
             </a>
             {", "}
             <a
@@ -57,7 +64,7 @@ const TrevorWatson = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              #React
+              #ReactJS
             </a>
             {", "}
             <a
@@ -74,6 +81,30 @@ const TrevorWatson = () => {
               rel="noopener noreferrer"
             >
               #GraphQL
+            </a>
+            {", "}
+            <a
+              href="https://www.contentful.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              #Contentful
+            </a>
+            {", "}
+            <a
+              href="https://www.contentful.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              #Contentful
+            </a>
+            {", "}
+            <a
+              href="https://cloudinary.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              #Cloudinary
             </a>
           </span>
         </div>
