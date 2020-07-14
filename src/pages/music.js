@@ -112,6 +112,26 @@ const MusicPage = () => {
                 driver for the unit.
               </p>
             </div>
+            <IframeContainer>
+              <iframe
+                title="7 Nation Army - Article 15"
+                width="450px"
+                height="300px"
+                src="https://www.youtube.com/embed/QEFXoevqiZQ"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                title="Hurry up and Wait - Article 15"
+                width="450px"
+                height="300px"
+                src="https://www.youtube.com/embed/CeUR2sayBvc"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </IframeContainer>
             <a
               href="https://www.facebook.com/23rdarmyband"
               target="_blank"
@@ -141,12 +161,11 @@ const IframeContainer = styled.div`
   justify-content: center;
   column-gap: 1rem;
   max-width: 1000px;
-  padding: 2rem 1rem 2.5rem 1rem;
+  padding: 2rem 1rem 0 1rem;
 `
 
 const ProjectContainer = styled.div`
   padding: 2rem 0 2rem 0;
-  margin: 1rem, 1rem 0 1rem;
   border-top: 1px solid;
 `
 
