@@ -73,6 +73,17 @@ const MusicPage = () => {
                 since.
               </p>
             </div>
+            <IframeContainer>
+            <iframe
+              title="Take the A Train - 3#"
+              width="450px"
+              height="300px"
+              src="https://www.youtube.com/embed/YBFQ2aVHFZ4"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            </IframeContainer>
             <a
               href="https://www.threesharp.com"
               target="_blank"
@@ -161,7 +172,7 @@ const IframeContainer = styled.div`
   justify-content: center;
   column-gap: 1rem;
   max-width: 1000px;
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 `
 
 const ProjectContainer = styled.div`

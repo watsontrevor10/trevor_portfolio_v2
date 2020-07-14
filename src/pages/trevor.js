@@ -92,14 +92,6 @@ const TrevorWatson = () => {
             </a>
             {", "}
             <a
-              href="https://www.contentful.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #Contentful
-            </a>
-            {", "}
-            <a
               href="https://cloudinary.com/"
               target="_blank"
               rel="noopener noreferrer"
