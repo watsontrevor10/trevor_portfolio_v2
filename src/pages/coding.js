@@ -91,8 +91,8 @@ const CodingPage = () => {
                 continue to show many facets of my life.
               </P>
               <Tools>
-                #Gatsbyjs, #Reactjs, #StyledComponents, #GraphQL, #InstagramAPI,
-                #WordpressAPI, #HeadlessBlog, #CloudinaryAPI
+                #Gatsbyjs, #Reactjs, #StyledComponents, #GraphQL,
+                #CloudinaryAPI, #ContentfulAPI
               </Tools>
             </StyledLink>
           </TextOverlay>
