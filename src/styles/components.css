@@ -54,9 +54,10 @@
 
 .main-container {
   display: grid;
-  box-shadow: 1px 3px 3px black;
+  /* box-shadow: 1px 3px 3px black; */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  height: 100vh;
 }
 
 .txt-overlay {
