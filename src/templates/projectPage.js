@@ -17,22 +17,12 @@ const BlogPost = ({ data }) => {
     if (website && github) {
       return (
         <div class="flex-content">
-          <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <ButtonLink href={website} target="_blank" rel="noopener noreferrer">
             <div class="main-btn">Visit Site</div>
-          </a>
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          </ButtonLink>
+          <ButtonLink href={github} target="_blank" rel="noopener noreferrer">
             <div class="main-btn">Github</div>
-          </a>
+          </ButtonLink>
           <Link to="/about" class="styled-link">
             <div class="main-btn">Hire Me</div>
           </Link>
@@ -41,14 +31,9 @@ const BlogPost = ({ data }) => {
     } else if (github === null && website) {
       return (
         <div class="flex-content">
-          <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <ButtonLink href={website} target="_blank" rel="noopener noreferrer">
             <div class="main-btn">Visit Site</div>
-          </a>
+          </ButtonLink>
           <Link to="/about" class="styled-link">
             <div class="main-btn">Hire Me</div>
           </Link>
@@ -57,21 +42,22 @@ const BlogPost = ({ data }) => {
     } else if (website === null && github) {
       return (
         <div class="flex-content">
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <ButtonLink href={github} target="_blank" rel="noopener noreferrer">
             <div class="main-btn">Github</div>
-          </a>
+          </ButtonLink>
           <Link to="/about" class="styled-link">
             <div class="main-btn">Hire Me</div>
           </Link>
         </div>
       )
     } else {
-      return 
+      return (
+        <div class="flex-content">
+          <Link to="/about" class="styled-link">
+            <div class="main-btn">Hire Me</div>
+          </Link>
+        </div>
+      )
     }
   }
 
@@ -80,13 +66,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO title={projects.projectName} description={value} />
       <div class="center">
-        <div
-          style={{
-            textAlign: "center",
-            borderBottom: "1px solid",
-            marginBottom: "1em",
-          }}
-        >
+        <TextContainer>
           <div>
             {/* Link to navigate to previous page */}
             <Link
@@ -97,7 +77,7 @@ const BlogPost = ({ data }) => {
             </Link>
           </div>
           <h2>{projects.projectName}</h2>
-        </div>
+        </TextContainer>
         <div class="prj-text-cont">
           {/* Project Description */}
           <p>{value}</p>
@@ -110,20 +90,12 @@ const BlogPost = ({ data }) => {
         </div>
         {/* Links to website, github and Hire Me page */}
         {/* conditional logic in case no website or github available on contentful */}
-          <SiteButtons />
+        <SiteButtons />
         <div class="img-container">
           {projects.screenshots.map(shots => (
             <Image src={shots.fluid.src} key={shots.fluid.src} />
           ))}
         </div>
-        <div
-          style={{
-            textAlign: "center",
-            maxWidth: "200px",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        ></div>
       </div>
     </Layout>
   )
@@ -157,6 +129,16 @@ const Image = styled.img`
   width: 100%;
   margin: auto;
   align-content: center;
+`
+const TextContainer = styled.div`
+  text-align: center;
+  border-bottom: 1px solid;
+  margin-bottom: 1em;
+`
+
+const ButtonLink = styled.a`
+  text-decoration: none;
+  color: inherit;
 `
 
 export default BlogPost
