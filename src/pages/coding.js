@@ -21,7 +21,7 @@ const CodingPage = ({ data }) => {
       </div>
       <Container>
         {content.map(project => (
-          <ProjectContainer key={project.node.contenftulId}>
+          <ProjectContainer key={project.node.contentful_id}>
             <ImageOverlay>
               <Img
                 src={project.node.mainImage.fluid.src}
@@ -29,7 +29,7 @@ const CodingPage = ({ data }) => {
               />
             </ImageOverlay>
             <TextOverlay>
-              <StyledLink to="/seekr">
+              <StyledLink to={"/project/" + project.node.contentful_id}>
                 <h3>{project.node.projectName}</h3>
                 <P>{project.node.blurb}</P>
               </StyledLink>
