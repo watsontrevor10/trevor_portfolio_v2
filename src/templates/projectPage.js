@@ -100,10 +100,9 @@ const BlogPost = ({ data }) => {
           </Link>
         </div>
         <div class="img-container">
-          {/* <Img src={trevormain} alt="Trevor Watson main page" />
-        <Img src={trevorwiting} alt="Trevor Watson writing blog page" />
-        <Img src={trevorcoding} alt="Trevor Watson web devlepment projects" /> */}
-          {/* <Img src={seekr} alt="DevPoint Seekr full-stack job search tool" /> */}
+          {projects.screenshots.map(shots => (
+            <Image src={shots.fluid.src} />
+          ))}
         </div>
         <div
           style={{
@@ -114,53 +113,6 @@ const BlogPost = ({ data }) => {
           }}
         ></div>
       </div>
-      <hr />
-      {/* <MainContainer>
-      <div style={{ paddingBottom: "1em", float: "right" }}>
-        <Link to="/writing">Back</Link>
-      </div>
-      <div>
-        <h1
-          dangerouslySetInnerHTML={{ __html: data.contentfulBlogPost.title }}
-        />
-      </div>
-      <Image>
-        <img
-          src={data.contentfulBlogPost.heroImage.fluid.src}
-          alt={data.contentfulBlogPost.heroImage.description}
-        />
-      </Image>
-      <div>
-        <p>{data.contentfulBlogPost.publishDate}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: data.contentfulBlogPost.body.childMarkdownRemark.html,
-          }}
-        ></div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexFlow: "wrap",
-        }}
-      >
-        {data.contentfulBlogPost.tags.map(cat => (
-          <span
-            style={{
-              margin: ".3rem .5rem",
-              borderRadius: ".3rem",
-              fontSize: "14px",
-            }}
-          >
-            #{cat}
-          </span>
-        ))}
-      </div>
-      <div style={{ float: "right" }}>
-        <Link to="/writing">Back</Link>
-      </div>
-    </MainContainer> */}
     </Layout>
   )
 }
@@ -191,8 +143,8 @@ const MainContainer = styled.div`
   margin: 5rem;
 `
 
-const Image = styled.div`
-  width: 70%;
+const Image = styled.img`
+  width: 100%;
   margin: auto;
   align-content: center;
 `
