@@ -21,7 +21,7 @@ const CodingPage = ({ data }) => {
       </div>
       <Container>
         {content.map(project => (
-          <ProjectContainer>
+          <ProjectContainer key={project.node.contenftulId}>
             <ImageOverlay>
               <Img
                 src={project.node.mainImage.fluid.src}
@@ -30,15 +30,8 @@ const CodingPage = ({ data }) => {
             </ImageOverlay>
             <TextOverlay>
               <StyledLink to="/seekr">
-                <h3>DevPoint Seekr</h3>
-                <P>
-                  {console.log(project.node.description.content.content)}
-                  {project.node.description.content.content}
-                </P>
-                #
-                {project.node.stack.map(stacks => (
-                  <Tools>#{stacks} | </Tools>
-                ))}
+                <h3>{project.node.projectName}</h3>
+                <P>{project.node.blurb}</P>
               </StyledLink>
             </TextOverlay>
           </ProjectContainer>
@@ -57,13 +50,7 @@ export const query = graphql`
           projectName
           contentful_id
           stack
-          description {
-            content {
-              content {
-                value
-              }
-            }
-          }
+          blurb
           mainImage {
             fluid(maxWidth: 500) {
               src
