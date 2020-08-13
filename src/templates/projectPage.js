@@ -71,7 +71,7 @@ const BlogPost = ({ data }) => {
             {/* Link to navigate to previous page */}
             <Link
               to={"/coding"}
-              style={{ position: "absolute", top: "6.5em", right: "1em" }}
+              style={{ position: "absolute", top: "6em", right: "2em" }}
             >
               Back
             </Link>
