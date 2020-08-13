@@ -3,12 +3,6 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
-// Images and assets
-import seekr from "../images/seekr.png"
-import tyqcolor from "../images/tyqcolor.png"
-import trevormain from "../images/trevor-main-page.png"
-import rpsMain from "../images/rps-main.png"
-
 const CodingPage = ({ data }) => {
   console.log(data)
 
@@ -53,7 +47,7 @@ export const query = graphql`
           stack
           blurb
           mainImage {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 900) {
               src
             }
           }

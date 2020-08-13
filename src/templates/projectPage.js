@@ -12,10 +12,8 @@ const BlogPost = ({ data }) => {
   console.log(projects)
   return (
     <Layout>
-      <SEO
-        title={projects.projectName}
-        description={value}
-      />
+      <SEO title={projects.projectName} description={value} />
+
       <div class="center">
         <div
           style={{
@@ -35,56 +33,14 @@ const BlogPost = ({ data }) => {
           <h2>{projects.projectName}</h2>
         </div>
         <div class="prj-text-cont">
+          {/* Project Description */}
           <p>{value}</p>
-          <span>
-            <a
-              href="https://www.gatsbyjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #GatsbyJS
-            </a>
-            {", "}
-            <a
-              href="https://www.postgresql.org/about/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #ReactJS
-            </a>
-            {", "}
-            <a
-              href="https://styled-components.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #StyledComponents
-            </a>
-            {", "}
-            <a
-              href="https://graphql.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #GraphQL
-            </a>
-            {", "}
-            <a
-              href="https://www.contentful.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #Contentful
-            </a>
-            {", "}
-            <a
-              href="https://cloudinary.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              #Cloudinary
-            </a>
-          </span>
+          {/* Project development stack */}
+            {projects.stack.map(stack => (
+              <span>
+                <strong>#{stack}</strong>{" "}
+              </span>
+            ))}
         </div>
         <div class="flex-content">
           <a
@@ -101,7 +57,7 @@ const BlogPost = ({ data }) => {
         </div>
         <div class="img-container">
           {projects.screenshots.map(shots => (
-            <Image src={shots.fluid.src} />
+            <Image src={shots.fluid.src} key={shots.fluid.src} />
           ))}
         </div>
         <div
@@ -124,7 +80,7 @@ export const query = graphql`
       projectName
       stack
       screenshots {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 1000) {
           src
         }
       }
