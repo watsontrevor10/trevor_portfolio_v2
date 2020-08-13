@@ -3,12 +3,6 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
-// Images and assets
-import seekr from "../images/seekr.png"
-import tyqcolor from "../images/tyqcolor.png"
-import trevormain from "../images/trevor-main-page.png"
-import rpsMain from "../images/rps-main.png"
-
 const CodingPage = ({ data }) => {
   console.log(data)
 
@@ -21,7 +15,7 @@ const CodingPage = ({ data }) => {
       </div>
       <Container>
         {content.map(project => (
-          <ProjectContainer key={project.node.contenftulId}>
+          <ProjectContainer key={project.node.contentful_id}>
             <ImageOverlay>
               <Img
                 src={project.node.mainImage.fluid.src}
@@ -29,7 +23,7 @@ const CodingPage = ({ data }) => {
               />
             </ImageOverlay>
             <TextOverlay>
-              <StyledLink to="/seekr">
+              <StyledLink to={"/project/" + project.node.slug}>
                 <h3>{project.node.projectName}</h3>
                 <P>{project.node.blurb}</P>
               </StyledLink>
@@ -48,11 +42,12 @@ export const query = graphql`
       edges {
         node {
           projectName
+          slug
           contentful_id
           stack
           blurb
           mainImage {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 900) {
               src
             }
           }
