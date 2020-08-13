@@ -9,11 +9,76 @@ const BlogPost = ({ data }) => {
   // project description
   const value = projects.description.content[0].content[0].value
 
-  console.log(projects)
+  // component looks for website and github and displays different depending on what is present in Contentful
+  const SiteButtons = () => {
+    const website = projects.website
+    const github = projects.github
+
+    if (website && github) {
+      return (
+        <div class="flex-content">
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <div class="main-btn">Visit Site</div>
+          </a>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <div class="main-btn">Github</div>
+          </a>
+          <Link to="/about" class="styled-link">
+            <div class="main-btn">Hire Me</div>
+          </Link>
+        </div>
+      )
+    } else if (github === null && website) {
+      return (
+        <div class="flex-content">
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <div class="main-btn">Visit Site</div>
+          </a>
+          <Link to="/about" class="styled-link">
+            <div class="main-btn">Hire Me</div>
+          </Link>
+        </div>
+      )
+    } else if (website === null && github) {
+      return (
+        <div class="flex-content">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <div class="main-btn">Github</div>
+          </a>
+          <Link to="/about" class="styled-link">
+            <div class="main-btn">Hire Me</div>
+          </Link>
+        </div>
+      )
+    } else {
+      return 
+    }
+  }
+
+  // Main page
   return (
     <Layout>
       <SEO title={projects.projectName} description={value} />
-
       <div class="center">
         <div
           style={{
@@ -23,6 +88,7 @@ const BlogPost = ({ data }) => {
           }}
         >
           <div>
+            {/* Link to navigate to previous page */}
             <Link
               to={"/coding"}
               style={{ position: "absolute", top: "6.5em", right: "1em" }}
@@ -36,25 +102,15 @@ const BlogPost = ({ data }) => {
           {/* Project Description */}
           <p>{value}</p>
           {/* Project development stack */}
-            {projects.stack.map(stack => (
-              <span>
-                <strong>#{stack}</strong>{" "}
-              </span>
-            ))}
+          {projects.stack.map(stack => (
+            <span>
+              <strong>#{stack}</strong>{" "}
+            </span>
+          ))}
         </div>
-        <div class="flex-content">
-          <a
-            href="https://trevorwatson.me/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <div class="main-btn">Visit Site</div>
-          </a>
-          <Link to="/about" class="styled-link">
-            <div class="main-btn">Hire Me</div>
-          </Link>
-        </div>
+        {/* Links to website, github and Hire Me page */}
+        {/* conditional logic in case no website or github available on contentful */}
+          <SiteButtons />
         <div class="img-container">
           {projects.screenshots.map(shots => (
             <Image src={shots.fluid.src} key={shots.fluid.src} />
@@ -79,6 +135,8 @@ export const query = graphql`
       contentful_id
       projectName
       stack
+      website
+      github
       screenshots {
         fluid(maxWidth: 1000) {
           src
@@ -93,10 +151,6 @@ export const query = graphql`
       }
     }
   }
-`
-
-const MainContainer = styled.div`
-  margin: 5rem;
 `
 
 const Image = styled.img`
