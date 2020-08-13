@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild(`Error while running blog post GraphQL query.`)
     return
   }
 
@@ -51,8 +51,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-exports.createProjects = async ({ graphql, actions, reporter }) => {
-  const { createProject } = actions
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
 
   const ProjectPage = path.resolve("./src/templates/projectPage.js")
 
@@ -63,28 +63,23 @@ exports.createProjects = async ({ graphql, actions, reporter }) => {
           node {
             projectName
             contentful_id
-            stack
+            slug
             blurb
-            mainImage {
-              fluid(maxWidth: 500) {
-                src
-              }
-            }
           }
         }
       }
     }
   `)
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    reporter.panicOnBuild(`Error while running dev project Page GraphQL query.`)
     return
   }
 
   const ProjectPages = result.data.allContentfulDevProjects.edges
 
   ProjectPages.forEach(project => {
-    createProject({
-      path: `/project/${project.node.contentful_id}`,
+    createPage({
+      path: `/project/${project.node.slug}`,
       component: ProjectPage,
       context: {
         id: project.node.contentful_id,

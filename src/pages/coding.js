@@ -29,7 +29,7 @@ const CodingPage = ({ data }) => {
               />
             </ImageOverlay>
             <TextOverlay>
-              <StyledLink to={"/project/" + project.node.contentful_id}>
+              <StyledLink to={"/project/" + project.node.slug}>
                 <h3>{project.node.projectName}</h3>
                 <P>{project.node.blurb}</P>
               </StyledLink>
@@ -48,6 +48,7 @@ export const query = graphql`
       edges {
         node {
           projectName
+          slug
           contentful_id
           stack
           blurb
