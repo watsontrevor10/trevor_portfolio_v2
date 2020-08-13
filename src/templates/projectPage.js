@@ -82,7 +82,7 @@ const BlogPost = ({ data }) => {
           {/* Project Description */}
           <p>{value}</p>
           {/* Project development stack */}
-          {projects.stack.map(stack => (
+          {projects.stack.sort().map(stack => (
             <span>
               <strong>#{stack}</strong>{" "}
             </span>
