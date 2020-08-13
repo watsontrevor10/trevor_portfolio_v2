@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 
@@ -9,100 +9,73 @@ import tyqcolor from "../images/tyqcolor.png"
 import trevormain from "../images/trevor-main-page.png"
 import rpsMain from "../images/rps-main.png"
 
-const CodingPage = () => {
+const CodingPage = ({ data }) => {
+  console.log(data)
+
+  const content = data.allContentfulDevProjects.edges
+
   return (
     <Layout>
       <div class="callout">
         <h2 class="callout-txt">Projects</h2>
       </div>
       <Container>
-        {/* DevPoint Seekr */}
-        <ProjectContainer>
-          <ImageOverlay>
-            <Img src={seekr} alt="DevPoint Seekr" />
-          </ImageOverlay>
-          <TextOverlay>
-            <StyledLink to="/seekr">
-              <h3>DevPoint Seekr</h3>
-              <P>
-                A web application for keeping track of your job applications
-                during the job hunt. Me and a team of 6 colleagues built this as
-                our "capstone" project while studying full-stack web development
-                at Devpoint Labs
-              </P>
-              <Tools>
-                #RubyonRails, #Reactjs, #SCSS, #ReCharts, #PostgreSQL
-              </Tools>
-            </StyledLink>
-          </TextOverlay>
-        </ProjectContainer>
-
-        {/* Ty Q. Color */}
-        <ProjectContainer>
-          <ImageOverlay>
-            <Img src={tyqcolor} alt="Ty Q. Color" />
-          </ImageOverlay>
-          <TextOverlay>
-            <StyledLink to={"/tyqcolor"}>
-              <h3>Ty Q. Color</h3>
-              <P>
-                A simple website built for Ty Watson, who does coloring books of
-                cool trucks. He wanted something simple that he could use to put
-                all of his coloring books in one place and market to more
-                people.
-              </P>
-              <Tools>#Gatsbyjs, #Reactjs, #StyledComponents</Tools>
-            </StyledLink>
-          </TextOverlay>
-        </ProjectContainer>
-
-        {/* Rock-Paper-Scissors */}
-        <ProjectContainer>
-          <ImageOverlay>
-            <Img src={rpsMain} alt="Rock-Paper-Scissors Game" />
-          </ImageOverlay>
-          <TextOverlay>
-            <StyledLink to={"/rps"}>
-              <h3>Rock-Paper-Scissors Game</h3>
-              <P>
-                The classic Rock-Paper-Scissors game we all know and
-                love. I began building this at DevPoint Labs and
-                I finished it up recently for fun and to practice with
-                JavaScript.
-              </P>
-              <Tools>
-                #Reactjs, #Semantic-UI
-              </Tools>
-            </StyledLink>
-          </TextOverlay>
-        </ProjectContainer>
-        
-        {/* Trevor Watson Portfolio */}
-        <ProjectContainer>
-          <ImageOverlay>
-            <Img src={trevormain} alt="Trevor Watson main page" />
-          </ImageOverlay>
-          <TextOverlay>
-            <StyledLink to={"/trevor"}>
-              <h3>Trevor Watson</h3>
-              <P>
-                This site is a representation of me as a person, not just a web
-                developer. We are more than our jobs, and I hope this site will
-                continue to show many facets of my life.
-              </P>
-              <Tools>
-                #Gatsbyjs, #Reactjs, #StyledComponents, #GraphQL,
-                #CloudinaryAPI, #ContentfulAPI
-              </Tools>
-            </StyledLink>
-          </TextOverlay>
-        </ProjectContainer>
-
+        {content.map(project => (
+          <ProjectContainer>
+            <ImageOverlay>
+              <Img
+                src={project.node.mainImage.fluid.src}
+                alt={project.node.projectName}
+              />
+            </ImageOverlay>
+            <TextOverlay>
+              <StyledLink to="/seekr">
+                <h3>DevPoint Seekr</h3>
+                <P>
+                  {console.log(project.node.description.content.content)}
+                  {project.node.description.content.content}
+                </P>
+                #
+                {project.node.stack.map(stacks => (
+                  <Tools>#{stacks} | </Tools>
+                ))}
+              </StyledLink>
+            </TextOverlay>
+          </ProjectContainer>
+        ))}
       </Container>
     </Layout>
   )
 }
 
+// Query grabbing projects data from Contentful
+export const query = graphql`
+  query {
+    allContentfulDevProjects {
+      edges {
+        node {
+          projectName
+          contentful_id
+          stack
+          description {
+            content {
+              content {
+                value
+              }
+            }
+          }
+          mainImage {
+            fluid(maxWidth: 500) {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+// Styles
 const P = styled.p`
   font-size: 16px;
 `
