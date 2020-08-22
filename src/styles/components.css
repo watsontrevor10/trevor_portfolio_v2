@@ -72,3 +72,9 @@
   opacity: 1;
   transition: 0.5s linear;
 }
+
+@media only screen and (max-width: 500px) {
+  .main-btn {
+    width: 6rem;
+  }
+}

@@ -67,15 +67,7 @@ const BlogPost = ({ data }) => {
       <SEO title={projects.projectName} description={value} />
       <div class="center">
         <TextContainer>
-          <div>
-            {/* Link to navigate to previous page */}
-            <Link
-              to={"/coding"}
-              style={{ position: "absolute", top: "6em", right: "2em" }}
-            >
-              Back
-            </Link>
-          </div>
+          {/* Link to navigate to previous page */}
           <h2>{projects.projectName}</h2>
         </TextContainer>
         <div class="prj-text-cont">
@@ -97,6 +89,9 @@ const BlogPost = ({ data }) => {
           ))}
         </div>
       </div>
+      <BackBtn>
+        <Link to={"/coding"}>Back</Link>
+      </BackBtn>
     </Layout>
   )
 }
@@ -139,6 +134,13 @@ const TextContainer = styled.div`
 const ButtonLink = styled.a`
   text-decoration: none;
   color: inherit;
+`
+
+const BackBtn = styled.div`
+  display: flex;
+  justify-content: left;
+  margin: 0 0 1em 1em;
+  /* background-color: red; */
 `
 
 export default BlogPost
