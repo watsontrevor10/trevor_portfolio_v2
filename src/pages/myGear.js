@@ -22,9 +22,25 @@ const MyStuff = () => {
           <List>
             <ListHead>Main Tools</ListHead>
             <ul>
-              <li>2018 Mac Mini - Core i7, 16GB RAM</li>
+              <li>
+                <a
+                  href="https://amzn.to/3jlOYSP"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  2018 Mac Mini - Core i7, 16GB RAM
+                </a>
+              </li>
               <li>2018 iPad Pro</li>
-              <li>LG 34" Ultrawide Monitor</li>
+              <li>
+                <a
+                  href="https://amzn.to/3gEG2Gv"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  LG 34" Ultrawide Monitor
+                </a>
+              </li>
               <li>Ultimate Hacking Keyboard</li>
               <li>Apple Magic Trackpad v1 (thinking about upgrading)</li>
               <li>Logi Trackball Mouse (been trying this out lately)</li>
@@ -47,26 +63,105 @@ const MyStuff = () => {
             <ul>
               <li>JBL Studio Monitors</li>
               <li>
-                Behringer U-Phoria Audio Interfaces (I have two different kinds)
+                <a
+                  href="https://amzn.to/3gD4sjB"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Behringer U-Phoria UMC22
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/3gGhz3o"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Behringer U-Phoria 404HD
+                </a>
               </li>
               <li>MXL Condensor Microphones</li>
-              <li>Akai LPK-25 Midi Controller</li>
+              <li>
+                <a
+                  href="https://amzn.to/3hFGdm5"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Akai LPK-25 Midi Controller
+                </a>
+              </li>
               <li>Ibanez Roadstar II (1981)</li>
               <li>Ibanez Talman Short Scale Bass</li>
-              <li>Gallien-Krueger MB112</li>
-              <li>Electro-Harmonix Big Bass Muff</li>
-              <li>Korg Pitch Black Tuner</li>
-              <li>Ditto Looper</li>
+              <li>
+                <a
+                  href="https://amzn.to/34ILJk7"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Gallien-Krueger MB112
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/3hQyQsl"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Electro-Harmonix Big Bass Muff
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/34LqONt"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Korg Pitch Black Tuner
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/3b2XBPl"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Ditto Looper
+                </a>
+              </li>
               <li>MuseScore</li>
             </ul>
           </List>
           <List>
             <ListHead>Photography/Video</ListHead>
             <ul>
-              <li>Sony A7III</li>
-              <li>Zeiss 55mm 1.8 lens</li>
+              <li>
+                <a
+                  href="https://www.amazon.com/gp/product/B07B43WPVK/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07B43WPVK&linkCode=as2&tag=watsoncreat06-20&linkId=1e35b41e1156503288c90114a88087d5"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  Sony A7III
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://amzn.to/32yzQe1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Zeiss 55mm 1.8 lens
+                </a>
+              </li>
               <li>Sony 24-70mm F3.5-5.6 kit lens</li>
-              <li>Takstar shotgun mic</li>
+              <li>
+                <a
+                  href="https://amzn.to/2EDpS2W"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Takstar Shotgun Mic
+                </a>
+              </li>
               <li>Adobe Lightroom</li>
               <li>Adobe Photoshop</li>
             </ul>

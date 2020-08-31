@@ -68,10 +68,6 @@ const Img = styled.img`
   transition: transform 0.2s linear;
 `
 
-const Tools = styled.span`
-  font-size: 12px;
-`
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: inherit;
