@@ -10,14 +10,14 @@ import Article15 from "../components/a15image"
 const MusicPage = () => {
   return (
     <Layout>
+      <SEO
+        title="music"
+        description="Music of Trevor Watson, bass, jazz improv, jazz bassist"
+      />
+      <div class="callout">
+        <h2 class="callout-txt">Music</h2>
+      </div>
       <div class="center">
-        <SEO
-          title="music"
-          description="Music of Trevor Watson, bass, jazz improv, jazz bassist"
-        />
-        <div class="callout">
-          <h2 class="callout-txt">Music</h2>
-        </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <IframeContainer>
             <iframe
@@ -38,7 +38,6 @@ const MusicPage = () => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-            
           </IframeContainer>
           <ProjectContainer>
             <div style={{ textAlign: "center" }}>
@@ -75,15 +74,15 @@ const MusicPage = () => {
               </p>
             </div>
             <IframeContainer>
-            <iframe
-              title="Take the A Train - 3#"
-              width="450px"
-              height="300px"
-              src="https://www.youtube.com/embed/YBFQ2aVHFZ4"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+              <iframe
+                title="Take the A Train - 3#"
+                width="450px"
+                height="300px"
+                src="https://www.youtube.com/embed/YBFQ2aVHFZ4"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </IframeContainer>
             <a
               href="https://www.threesharp.com"
