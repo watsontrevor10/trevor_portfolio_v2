@@ -13,10 +13,6 @@ const PhotoPage = ({ data }) => {
           <h2 class="callout-txt">Photography</h2>
         </div>
         <Cloudinary />
-        {/* <div class="callout">
-          <h2 class="callout-txt">Instagram</h2>
-        </div>
-        <Photos /> */}
       </div>
     </Layout>
   )

@@ -38,6 +38,7 @@ const MusicPage = () => {
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            
           </IframeContainer>
           <ProjectContainer>
             <div style={{ textAlign: "center" }}>
